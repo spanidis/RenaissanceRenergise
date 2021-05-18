@@ -1,3 +1,7 @@
 #ps_header{
     min-height: 100px;
 }
+
+.nav-link {
+    color: #212945 !important;
+}
