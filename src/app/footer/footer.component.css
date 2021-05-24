@@ -2,3 +2,7 @@
     min-height: 100px;
     padding-top: 20px;
 }
+
+.ps_bold{
+    font-weight: bold;
+}

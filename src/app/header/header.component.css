@@ -2,6 +2,14 @@
     min-height: 100px;
 }
 
+.ps_bold{
+    font-weight: bold;
+}
+
+.ps_header_img{
+    width:100%;
+}
+
 .nav-link {
     color: #212945 !important;
 }
