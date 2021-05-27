@@ -17,4 +17,12 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  btnClickSignUp(){
+    console.log("Btn SignUp clicked");
+  }
+
+  btnClickLogIn(){
+    console.log("Btn LogIn clicked");
+  }
+
 }

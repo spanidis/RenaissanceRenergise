@@ -1,4 +1,3 @@
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -9,7 +8,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +15,7 @@ import { SignupComponent } from './signup/signup.component';
     HeaderComponent,
     FooterComponent,
     ContentComponent,
-    LandingPageComponent,
-    SignupComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
