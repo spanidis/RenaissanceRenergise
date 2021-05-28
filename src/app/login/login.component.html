@@ -1,23 +1,23 @@
-<div id="ps_signuppage" class="container bg-light">
+<div id="ps_loginpage" class="container bg-light">
     <div class="row ps_padding_20">
       <div class="col-6">
         <img class="img-fluid" src="assets/images/renaissance_landing_logo.png">
       </div>
       <div class="col-6">
-        <h2>Sign up</h2>
-        <h3>Enter your email and password.</h3>
+        <h2>Log in</h2>
+        <h3>Insert your email and password.</h3>
         <!--social media row-->
         <!--faceboot twitter in-->
         <app-socialmedia></app-socialmedia>
 
         <div class="row pt-1">
             <div class="col d-grid gap-2 col-6 mx-auto">
-              <button type="button" class="btn ps_renergise_btn">SIGN UP</button>
+              <button type="button" class="btn ps_renergise_btn" (click)="btnClickSignUp()">SIGN UP</button>
             </div>
         </div>
         <div class="row pt-1">
           <div class="col d-grid gap-2 col-6 mx-auto">
-            <button type="button" class="btn ps_renergise_btn">LOG IN</button>
+            <button type="button" class="btn ps_renergise_btn" (click)="btnClickLogIn()">LOG IN</button>
           </div>
         </div>
 

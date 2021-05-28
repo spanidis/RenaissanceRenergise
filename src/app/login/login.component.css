@@ -1,0 +1,31 @@
+#ps_landingpage{
+    min-height: 400px;
+}
+
+.ps_padding_20{
+    padding: 20px;
+}
+
+.ps_renergise_btn{
+    background-color: #ffffff;
+    border-color: #3BABB0;
+    color: #3BABB0;
+}
+
+.ps_renergise_btn:hover{
+    background-color: #3BABB0;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.ps_renergise_reverse_btn{
+    background-color: #3BABB0;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.ps_renergise_reverse_btn:hover{
+    background-color: #ffffff;
+    border-color: #3BABB0;
+    color: #3BABB0;
+}
