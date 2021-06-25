@@ -6,3 +6,11 @@
 .ps_bold{
     font-weight: bold;
 }
+
+.ps_copyright{
+    font-size: small;
+}
+
+.ps_copyright img{
+    width: 80px;
+}

@@ -5,14 +5,24 @@ body {
     padding: 30px;
 }
 
-ps_logo_green{
+.ps_logo_green {
     color: #3BABB0;
 }
 
-ps_logo_light_blue{
+.ps_logo_light_blue {
     color: #124775;
 }
 
-ps_logo_dark_blue{
+.ps_logo_dark_blue {
     color: #212945;
+}
+
+a {
+    color: #3BABB0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005458;
+    text-decoration: none;
 }

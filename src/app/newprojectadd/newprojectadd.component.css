@@ -1,4 +1,4 @@
-#ps_signuppage{
+#ps_profile page{
     min-height: 400px;
 }
 
@@ -11,7 +11,7 @@
     background-color: #ffffff;
     border-color: #3BABB0;
     color: #3BABB0;
-    max-width: 20em;
+    width: 20em;
 }
 
 .ps_renergise_btn:hover{
@@ -19,21 +19,7 @@
     background-color: #3BABB0;
     border-color: #ffffff;
     color: #ffffff;
-    max-width: 20em;
-}
-
-.ps_renergise_btn_sm{
-    border-radius: 10px;
-    background-color: #ffffff;
-    border-color: #3BABB0;
-    color: #3BABB0;
-}
-
-.ps_renergise_btn_sm:hover{
-    border-radius: 10px;
-    background-color: #3BABB0;
-    border-color: #ffffff;
-    color: #ffffff;
+    width: 20em;
 }
 
 .ps_renergise_reverse_btn{
@@ -41,7 +27,7 @@
     background-color: #3BABB0;
     border-color: #ffffff;
     color: #ffffff;
-    max-width: 20em;
+    width: 20em;
 }
 
 .ps_renergise_reverse_btn:hover{
@@ -49,11 +35,5 @@
     background-color: #ffffff;
     border-color: #3BABB0;
     color: #3BABB0;
-    max-width: 20em;
-}
-
-.ps_landing img{
-    max-width: 30em;
-    padding-top: 2em;
-    padding-left: 2em;
+    width: 20em;
 }

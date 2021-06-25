@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -11,11 +9,17 @@ import { faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-
 export class SignupComponent implements OnInit {
 
   constructor(private router: Router) { }
-  faFacebook = faFacebook;
-  faTwitter = faTwitter;
-  faLinkedin = faLinkedin;
 
   ngOnInit(): void {
   }
 
+  btnClickBack(){
+    console.log("Btn Back clicked");
+    this.router.navigateByUrl('/');
+  }
+
+  btnClickSignUp(){
+    console.log("Btn Signup clicked");
+    this.router.navigateByUrl('/myprofile');
+  }
 }
