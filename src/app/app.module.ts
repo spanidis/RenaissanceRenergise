@@ -17,6 +17,8 @@ import { NewprojectComponent } from './newproject/newproject.component';
 import { NewprojectaddComponent } from './newprojectadd/newprojectadd.component';
 import { AddingAssetGeneralComponent } from './adding-asset-general/adding-asset-general.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { AddingAssetNewComponent } from './adding-asset-new/adding-asset-new.component';
+import { LeftSideLogoComponent } from './left-side-logo/left-side-logo.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     NewprojectComponent,
     NewprojectaddComponent,
     AddingAssetGeneralComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    AddingAssetNewComponent,
+    LeftSideLogoComponent
   ],
   imports: [
     BrowserModule,

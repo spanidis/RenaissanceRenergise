@@ -26,3 +26,58 @@ a:hover {
     color: #005458;
     text-decoration: none;
 }
+
+.ps_padding_20{
+    padding: 20px;
+}
+
+/* RENERGISE BTN */
+.ps_renergise_btn{
+    border-radius: 10px;
+    background-color: #ffffff;
+    border-color: #3BABB0;
+    color: #3BABB0;
+    max-width: 20em;
+}
+
+.ps_renergise_btn:hover{
+    border-radius: 10px;
+    background-color: #3BABB0;
+    border-color: #ffffff;
+    color: #ffffff;
+    max-width: 20em;
+}
+
+.ps_renergise_btn_sm{
+    border-radius: 10px;
+    background-color: #ffffff;
+    border-color: #3BABB0;
+    color: #3BABB0;
+}
+
+.ps_renergise_btn_sm:hover{
+    border-radius: 10px;
+    background-color: #3BABB0;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+/* END OF RENERGISE BTN */
+
+/* RENERGISE BTN REVERSE */
+.ps_renergise_reverse_btn{
+    border-radius: 10px;
+    background-color: #3BABB0;
+    border-color: #ffffff;
+    color: #ffffff;
+    max-width: 20em;
+}
+
+.ps_renergise_reverse_btn:hover{
+    border-radius: 10px;
+    background-color: #ffffff;
+    border-color: #3BABB0;
+    color: #3BABB0;
+    max-width: 20em;
+}
+/* END OF RENERGISE BTN REVERSE */

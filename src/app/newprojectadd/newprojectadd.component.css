@@ -1,39 +1,3 @@
 #ps_profile page{
     min-height: 400px;
 }
-
-.ps_padding_20{
-    padding: 20px;
-}
-
-.ps_renergise_btn{
-    border-radius: 10px;
-    background-color: #ffffff;
-    border-color: #3BABB0;
-    color: #3BABB0;
-    width: 20em;
-}
-
-.ps_renergise_btn:hover{
-    border-radius: 10px;
-    background-color: #3BABB0;
-    border-color: #ffffff;
-    color: #ffffff;
-    width: 20em;
-}
-
-.ps_renergise_reverse_btn{
-    border-radius: 10px;
-    background-color: #3BABB0;
-    border-color: #ffffff;
-    color: #ffffff;
-    width: 20em;
-}
-
-.ps_renergise_reverse_btn:hover{
-    border-radius: 10px;
-    background-color: #ffffff;
-    border-color: #3BABB0;
-    color: #3BABB0;
-    width: 20em;
-}

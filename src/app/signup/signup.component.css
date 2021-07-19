@@ -2,58 +2,20 @@
     min-height: 400px;
 }
 
-.ps_padding_20{
-    padding: 20px;
-}
-
 .ps_renergise_btn{
     border-radius: 10px;
-    background-color: #ffffff;
-    border-color: #3BABB0;
-    color: #3BABB0;
+    background-color: #ffffff !important;
+    border-color: #3BABB0 !important;
     max-width: 20em;
 }
 
 .ps_renergise_btn:hover{
     border-radius: 10px;
-    background-color: #3BABB0;
-    border-color: #ffffff;
-    color: #ffffff;
+    background-color: #3BABB0 !important;
+    border-color: #ffffff !important;
     max-width: 20em;
 }
 
-.ps_renergise_btn_sm{
-    border-radius: 10px;
-    background-color: #ffffff;
-    border-color: #3BABB0;
-    color: #3BABB0;
-}
-
-.ps_renergise_btn_sm:hover{
-    border-radius: 10px;
-    background-color: #3BABB0;
-    border-color: #ffffff;
-    color: #ffffff;
-}
-
-.ps_renergise_reverse_btn{
-    border-radius: 10px;
-    background-color: #3BABB0;
-    border-color: #ffffff;
-    color: #ffffff;
-    max-width: 20em;
-}
-
-.ps_renergise_reverse_btn:hover{
-    border-radius: 10px;
-    background-color: #ffffff;
-    border-color: #3BABB0;
-    color: #3BABB0;
-    max-width: 20em;
-}
-
-.ps_landing img{
-    max-width: 30em;
-    padding-top: 2em;
-    padding-left: 2em;
+input[type="email"] {
+    color: #ffffff !important;
 }

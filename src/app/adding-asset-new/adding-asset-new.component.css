@@ -1,9 +1,9 @@
-#ps_profilepage{
+#ps_newpage{
     min-height: 400px;
 }
 
-.ps_myprofile{
-    max-width: 20em;
+.ps_padding_20{
+    padding: 20px;
 }
 
 .ps_renergise_btn{
@@ -36,4 +36,16 @@
     border-color: #3BABB0;
     color: #3BABB0;
     max-width: 30em;
+}
+
+
+.ps_form {
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: 2px solid #f8f8f8;
+    padding: 20px; 
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    
 }
