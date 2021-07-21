@@ -1,13 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SignupComponent } from './signup/signup.component';
-import { LoginComponent } from './login/login.component';
-import { ProfileComponent } from './profile/profile.component';
-import { NewprojectComponent } from './newproject/newproject.component';
-import { NewprojectaddComponent } from './newprojectadd/newprojectadd.component';
-import { AddingAssetGeneralComponent } from './adding-asset-general/adding-asset-general.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-import { AddingAssetNewComponent } from './adding-asset-new/adding-asset-new.component';
+
+import { PrivacyPolicyComponent } from './0-privacy-policy/privacy-policy.component';
+import { ProfileComponent } from './0-profile/profile.component';
+
+import { SignupComponent } from './2-signup/signup.component';
+import { LoginComponent } from './2-login/login.component';
+
+import { NewprojectComponent } from './new-project/new-project.component';
+import { NewprojectaddComponent } from './new-project-add/new-project-add.component';
+
+import { AddingAssetNewComponent } from './3-adding-asset-new/adding-asset-new.component';
+import { AddingDataFilesComponent } from './3-adding-data-files/adding-data-files.component';
+import { AddingConfigFilesComponent } from './3-adding-config-files/adding-config-files.component';
+import { AddingAssetGeneralComponent } from './3-adding-asset-general/adding-asset-general.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -19,6 +25,8 @@ const routes: Routes = [
 
   { path: 'tabgeneral', component: AddingAssetGeneralComponent},
   { path: 'tabnew', component: AddingAssetNewComponent},
+  { path: 'tabimpdatafile', component: AddingDataFilesComponent},
+  { path: 'tabimpconfigfile', component: AddingConfigFilesComponent},
 
   { path: 'privacypolicy', component: PrivacyPolicyComponent},
   
