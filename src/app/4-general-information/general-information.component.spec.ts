@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddingAssetGeneralComponent } from './adding-asset-general.component';
+import { AddingAssetGeneralComponent } from './general-information.component';
 
 describe('AddingAssetGeneralComponent', () => {
   let component: AddingAssetGeneralComponent;

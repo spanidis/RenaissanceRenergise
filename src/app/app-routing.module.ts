@@ -13,7 +13,7 @@ import { NewprojectaddComponent } from './new-project-add/new-project-add.compon
 import { AddingAssetNewComponent } from './4-adding-asset-new/adding-asset-new.component';
 import { AddingDataFilesComponent } from './4-adding-data-files/adding-data-files.component';
 import { AddingConfigFilesComponent } from './4-adding-config-files/adding-config-files.component';
-import { AddingAssetGeneralComponent } from './4-adding-asset-general/adding-asset-general.component';
+import { AddingAssetGeneralComponent } from './4-general-information/general-information.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
