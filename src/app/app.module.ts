@@ -18,24 +18,23 @@ import { LandingPageComponent } from './1-landing-page/landing-page.component';
 import { LoginComponent } from './2-login/login.component';
 import { SignupComponent } from './2-signup/signup.component';
 
-import { ContentComponent } from './content/content.component';
-
-import { AddingAssetGeneralComponent } from './adding-asset-general/adding-asset-general.component';
-import { AddingDataFilesComponent } from './adding-data-files/adding-data-files.component';
-import { AddingAssetNewComponent } from './adding-asset-new/adding-asset-new.component';
-import { AddingConfigFilesComponent } from './adding-config-files/adding-config-files.component';
-
-import { NewprojectComponent } from './new-project/new-project.component';
+import { NewprojectComponent } from './3-new-project/new-project.component';
 import { NewprojectaddComponent } from './new-project-add/new-project-add.component';
 import { UserMainMenuComponent } from './user-main-menu/user-main-menu.component';
 import { MenuInputDataComponent } from './menu-input-data/menu-input-data.component';
+
+import { AddingAssetGeneralComponent } from './4-adding-asset-general/adding-asset-general.component';
+import { AddingDataFilesComponent } from './4-adding-data-files/adding-data-files.component';
+import { AddingAssetNewComponent } from './4-adding-asset-new/adding-asset-new.component';
+import { AddingConfigFilesComponent } from './4-adding-config-files/adding-config-files.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ContentComponent,
     LandingPageComponent,
     SocialmediaComponent,
     LoginComponent,

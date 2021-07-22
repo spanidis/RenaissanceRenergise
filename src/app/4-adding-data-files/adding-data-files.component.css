@@ -1,0 +1,26 @@
+#ps_importdatafile{
+    min-height: 400px;
+}
+
+.ps_form {
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: 2px solid #f8f8f8;
+    padding: 20px; 
+}
+
+.ps_renergise_btn{
+    max-width: 30em;
+}
+
+.ps_renergise_btn:hover{
+    max-width: 30em;
+}
+
+.ps_renergise_reverse_btn{
+    max-width: 30em;
+}
+
+.ps_renergise_reverse_btn:hover{
+    max-width: 30em;
+}
