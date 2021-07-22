@@ -4,8 +4,8 @@ import { faMapMarkerAlt, faCalendarWeek, faClock } from '@fortawesome/free-solid
 
 @Component({
   selector: 'app-adding-asset-general',
-  templateUrl: './adding-asset-general.component.html',
-  styleUrls: ['./adding-asset-general.component.css']
+  templateUrl: './general-information.component.html',
+  styleUrls: ['./general-information.component.css']
 })
 export class AddingAssetGeneralComponent implements OnInit {
 
