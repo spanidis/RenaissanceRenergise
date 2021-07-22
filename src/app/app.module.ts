@@ -2,6 +2,8 @@ import { RouterModule } from '@angular/router';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule, MAT_DATE_LOCALE} from '@angular/material/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +29,7 @@ import { AddingAssetGeneralComponent } from './4-general-information/general-inf
 import { AddingDataFilesComponent } from './4-adding-data-files/adding-data-files.component';
 import { AddingAssetNewComponent } from './4-adding-asset-new/adding-asset-new.component';
 import { AddingConfigFilesComponent } from './4-adding-config-files/adding-config-files.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -55,11 +58,14 @@ import { AddingConfigFilesComponent } from './4-adding-config-files/adding-confi
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    MatDatepickerModule, 
+    MatNativeDateModule,
     RouterModule.forRoot([
       {path: '', component: LandingPageComponent}
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [{provide: MAT_DATE_LOCALE, useValue: 'el-GR'},],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })

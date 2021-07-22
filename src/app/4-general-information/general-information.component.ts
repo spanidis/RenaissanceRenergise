@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewChild, ElementRef } from '@angular/core'
 
 import { faMapMarkerAlt, faCalendarWeek, faClock } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,16 +16,24 @@ export class AddingAssetGeneralComponent implements OnInit {
   faCalendarWeek = faCalendarWeek;
   faClock = faClock;
 
+  @ViewChild('generalLocation') generalLocation: ElementRef;
+  @ViewChild('generalTimezone') generalTimezone: ElementRef;
+  @ViewChild('generalStartDateTime') generalStartDateTime: ElementRef;
+  @ViewChild('generalTempResolution') generalTempResolution: ElementRef; 
+
   ngOnInit(): void {
   }
 
   btnClickClear(){
-    console.log("Btn Clear clicked");
-    //this.router.navigateByUrl('/signup');
+      console.log("Btn Clear clicked");
+      this.generalLocation.nativeElement.value = '';
+      this.generalTimezone.nativeElement.value = '';
+      this.generalStartDateTime.nativeElement.value = '';
+      this.generalTempResolution.nativeElement.value = '';
   }
 
   btnClickSubmit(){
-    console.log("Btn Submit clicked");
-    //this.router.navigateByUrl('/newprojectadd');
+      console.log("Btn Submit clicked");
+    
   }
 }
