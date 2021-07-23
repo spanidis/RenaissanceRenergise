@@ -24,3 +24,11 @@
 .ps_renergise_reverse_btn:hover{
     max-width: 30em;
 }
+
+.ps_imgsize{
+    max-width:40px;
+}
+
+.ps_horisontal_line{
+    max-width: 30em;
+}

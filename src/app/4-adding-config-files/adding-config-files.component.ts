@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faSave } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-adding-config-files',
@@ -9,6 +10,8 @@ export class AddingConfigFilesComponent implements OnInit {
 
   constructor() { }
 
+  faSave = faSave;
+
   ngOnInit(): void {
   }
 
@@ -17,8 +20,8 @@ export class AddingConfigFilesComponent implements OnInit {
     //this.router.navigateByUrl('/signup');
   }
 
-  btnClickAddAsset(){
-    console.log("Btn Add Asset clicked");
+  btnClickSubmit(){
+    console.log("Btn Submit clicked");
     //this.router.navigateByUrl('/newprojectadd');
   }
 }

@@ -14,6 +14,7 @@ import { AddingAssetNewComponent } from './4-adding-asset-new/adding-asset-new.c
 import { AddingDataFilesComponent } from './4-adding-data-files/adding-data-files.component';
 import { AddingConfigFilesComponent } from './4-adding-config-files/adding-config-files.component';
 import { AddingAssetGeneralComponent } from './4-general-information/general-information.component';
+import { ModifyAssetComponent } from './4-modify-asset/modify-asset.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'tabnew', component: AddingAssetNewComponent},
   { path: 'tabimpdatafile', component: AddingDataFilesComponent},
   { path: 'tabimpconfigfile', component: AddingConfigFilesComponent},
+  { path: 'tabmodify', component: ModifyAssetComponent},
 
   { path: 'privacypolicy', component: PrivacyPolicyComponent},
   

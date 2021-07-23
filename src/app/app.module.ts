@@ -23,14 +23,15 @@ import { SignupComponent } from './2-signup/signup.component';
 import { NewprojectComponent } from './3-new-project/new-project.component';
 import { NewprojectaddComponent } from './new-project-add/new-project-add.component';
 import { UserMainMenuComponent } from './3-user-main-menu/user-main-menu.component';
-import { MenuInputDataComponent } from './menu-input-data/menu-input-data.component';
+import { MenuInputDataComponent } from './3-menu-input-data/menu-input-data.component';
 
 import { AddingAssetGeneralComponent } from './4-general-information/general-information.component';
 import { AddingDataFilesComponent } from './4-adding-data-files/adding-data-files.component';
 import { AddingAssetNewComponent } from './4-adding-asset-new/adding-asset-new.component';
 import { AddingConfigFilesComponent } from './4-adding-config-files/adding-config-files.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModifyAssetComponent } from './4-modify-asset/modify-asset.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UserMainMenuComponent,
     AddingDataFilesComponent,
     AddingConfigFilesComponent,
-    MenuInputDataComponent
+    MenuInputDataComponent,
+    ModifyAssetComponent
   ],
   imports: [
     BrowserModule,

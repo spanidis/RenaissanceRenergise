@@ -1,4 +1,4 @@
-<div id="ps_impconfigfile" class="container bg-light">
+<div id="ps_modifyasset" class="container bg-light">
     <div class="row ps_padding_20">
         <div class="col-md-6">
             <div class="row pt-4">
@@ -11,7 +11,7 @@
             
             <div class="row">
                 <div class="col-md-3 d-grid mx-auto"></div>
-                <div class="col-md-3 d-grid mx-auto"><a href="#"><img title="Import Configuration File" src="assets/images/1x/btn_impConfigFilesSelected.png"></a></div>
+                <div class="col-md-3 d-grid mx-auto"><a href="#"><img title="Import Configuration File" src="assets/images/1x/btn_impConfFiles.png"></a></div>
                 <div class="col-md-1 d-grid mx-auto"></div>
                 <div class="col-md-3 d-grid mx-auto"><a href="#"><img title="Import Data File" src="assets/images/1x/btn_impDataFiles.png"></a></div>
                 <div class="col-md-2 d-grid mx-auto"></div>
@@ -19,7 +19,7 @@
             
             <div class="row">
                 <div class="col-md-1 d-grid mx-auto"></div>
-                <div class="col-md-3 d-grid mx-auto"><a href="#"><img title="Asset Modify" src="assets/images/1x/btn_assetModify.png"></a></div>
+                <div class="col-md-3 d-grid mx-auto"><a href="#"><img title="Asset Modify" src="assets/images/1x/btn_assetModifySelected.png"></a></div>
                 <div class="col-md-1 d-grid mx-auto"></div>
                 <div class="col-md-3 d-grid mx-auto"><a href="#"><img title="Calculate" src="assets/images/1x/btn_calculate.png"></a></div>
                 <div class="col-md-4 d-grid mx-auto"></div>
@@ -27,56 +27,45 @@
         </div>
 
       <div class="col-md-6 ps_form">
-        <h1><img class="img-fluid ps_imgsize" title="Import Data Files" src="assets/images/1x/importImage.png"> Import Configuration Files</h1>
-        <h2>Please fill in the form.</h2>
+        <h1><img class="img-fluid ps_imgsize" title="Modify Asset" src="assets/images/1x/modifyAssetImage.png"> Modify Asset</h1>
+        <h2>You may modify specific information of the asset.</h2>
         
         <div class="row pt-4">
             <div class="col-8 d-grid mx-auto">
-                <div class="ps_logo_green">How do I import configuration files?</div>
-                <div>Nam eu turpis at nibh consequat placerat. Praesent eu est hendrerit, pharetra ligula ut, semper nisl. Nam libero nisi, consectetur sed varius eget, mollis id nisi. </div>
+                <div class="ps_logo_green">How do I import data files?</div>
+                <div>Nam eu turpis at nibh consequat placerat. xxxxxxxxxxxxxxxxxPraesent eu est hendrerit, pharetra ligula ut, semper nisl. Nam libero nisi, consectetur sed varius eget, mollis id nisi. </div>
             </div>
             <div class="col-4 d-grid mx-auto"></div>
         </div>    
         
         <div class="row pt-1">
             <div class="col-8 d-grid mx-auto">
-                <mat-form-field appearance="fill">
-                    <mat-label>Already loaded config files:</mat-label>
-                    <select size="3" matNativeControl name="alreadyLoadedData" id="alreadyLoadedData" #alreadyLoadedData class="form-control ps_renergise_btn">
-                        <option value="File 1">File 1</option>
-                        <option value="File 2">File 2</option>
-                        <option value="File 3">File 3</option>
-                        <option value="File 4">File 4</option>
-                    </select>
-                </mat-form-field>
+                <input name="generalLocation" id="generalLocation" type="text" class="form-control ps_renergise_btn" placeholder="Location">
             </div>
-            <div class="col-4 d-grid mx-auto"></div>
-        </div>
-
-        <div class="row pt-1">
-            <div class="col d-grid mx-auto"><hr class="ps_horisontal_line"></div>
-        </div>
+            <div class="col-4 d-grid mx-auto">
+            </div>
+        </div> 
 
         <div class="row pt-1">
             <div class="col-8 d-grid mx-auto">
-                <input matInput name="loadDataFile" id="loadDataFile" #loadDataFile type="text" class="form-control ps_renergise_btn" placeholder="Load local data file or folder">
+                <input name="loadData" id="loadData" type="text" class="form-control ps_renergise_btn" placeholder="Load local data file or folder">
             </div>
             <div class="col-4 d-grid mx-auto">
-                <fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
+                
             </div>
         </div> 
 
         <div class="row pt-1">
             <div class="col-4 d-grid mx-auto">
-                <button type="button" class="btn ps_renergise_btn" (click)="btnClickCancel()">Cancel</button>
-            </div>
-            <div class="col-4 d-grid mx-auto">
-                <button type="button" class="btn ps_renergise_btn" (click)="btnClickSubmit()">Submit</button>
+                
             </div>
             <div class="col-4 d-grid mx-auto">
                 
             </div>
-        </div>  
+            <div class="col-4 d-grid mx-auto">
+                
+            </div>
+        </div> 
 
       </div>
       

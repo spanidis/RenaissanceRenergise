@@ -5,3 +5,7 @@
 .ps_white{
     background-color: #ffffff;
 }
+
+.ps_imgsize{
+    max-width:40px;
+}
