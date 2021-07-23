@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddingAssetNewComponent } from './adding-asset-new.component';
+import { AddingAssetNewComponent } from './4-new-asset-1-public-grid.component';
 
 describe('AddingAssetNewComponent', () => {
   let component: AddingAssetNewComponent;

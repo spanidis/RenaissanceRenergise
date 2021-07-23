@@ -1,0 +1,35 @@
+#ps_newpage{
+    min-height: 400px;
+}
+
+.ps_white{
+    background-color: #ffffff;
+}
+
+.ps_imgsize{
+    max-width:40px;
+}
+
+.ps_renergise_btn{
+    max-width: 30em;
+}
+
+.ps_renergise_btn:hover{
+    max-width: 30em;
+}
+
+.ps_renergise_reverse_btn{
+    max-width: 30em;
+}
+
+.ps_renergise_reverse_btn:hover{
+    max-width: 30em;
+}
+
+.ps_imgsize{
+    max-width:40px;
+}
+
+.ps_horisontal_line{
+    max-width: 30em;
+}

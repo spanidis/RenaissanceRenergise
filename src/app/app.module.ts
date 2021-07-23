@@ -27,7 +27,7 @@ import { MenuInputDataComponent } from './3-menu-input-data/menu-input-data.comp
 
 import { AddingAssetGeneralComponent } from './4-general-information/general-information.component';
 import { AddingDataFilesComponent } from './4-adding-data-files/adding-data-files.component';
-import { AddingAssetNewComponent } from './4-adding-asset-new/adding-asset-new.component';
+import { AddingAssetNewComponent } from './4-new-asset-1-public-grid/4-new-asset-1-public-grid.component';
 import { AddingConfigFilesComponent } from './4-adding-config-files/adding-config-files.component';
 import { ModifyAssetComponent } from './4-modify-asset/modify-asset.component';
 
