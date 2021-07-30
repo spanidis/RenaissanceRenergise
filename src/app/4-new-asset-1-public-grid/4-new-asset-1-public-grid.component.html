@@ -10,19 +10,18 @@
                 <h1><img class="img-fluid ps_imgsize" title="Import Data Files" src="assets/images/1x/newAssetImage.png"> New asset: public grid</h1>
                 <h2>Please insert the data.</h2>
             </div>            
-            
+                     
             <div class="row">
                 <div class="col-8 d-grid mx-auto">
                     <div class="ps_logo_green">How do I create a new asset?</div>
                     <div>Nam eu turpis at nibh consequat placerat. Praesent eu est hendrerit, pharetra ligula ut, semper nisl. Nam libero nisi, consectetur sed varius eget, mollis id nisi. </div>
                 </div>
                 <div class="col-4 d-grid mx-auto">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="publicGridAnvnanced" (click)="toggleShow()">
-                        <label class="form-check-label" for="publicGridAnvnanced">Advanced</label>
-                    </div>
+                    <mat-form-field appearance="fill">
+                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
+                    </mat-form-field>
                 </div>
-            </div>    
+            </div> 
             
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
@@ -64,7 +63,7 @@
                 </div>
             </div>
 
-            <div *ngIf="isShown" class="row pt-1">
+            <div *ngIf="isShown==true" class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
                         <input matInput name="co2Emissions" id="co2Emissions" #co2Emissions type="text" class="form-control ps_renergise_btn" placeholder="CO2 Emissions (in gCO2/KWh)">
@@ -73,7 +72,7 @@
                 <div class="col-4 d-grid mx-auto"></div>
             </div>
 
-            <div *ngIf="isShown" class="row pt-1">
+            <div *ngIf="isShown==true" class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
                         <input matInput name="monthlyPeakCost" id="monthlyPeakCost" #monthlyPeakCost type="text" class="form-control ps_renergise_btn" placeholder="Monthly Peak Cost (in &euro;/KWh)">

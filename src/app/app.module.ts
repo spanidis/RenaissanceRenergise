@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MAT_DATE_LOCALE} from '@angular/material/core';
+import {MatSlideToggleModule, MatSlideToggle} from '@angular/material/slide-toggle';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -62,6 +63,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FontAwesomeModule,
     MatDatepickerModule, 
     MatNativeDateModule,
+    MatSlideToggleModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       {path: '', component: LandingPageComponent}
     ]),

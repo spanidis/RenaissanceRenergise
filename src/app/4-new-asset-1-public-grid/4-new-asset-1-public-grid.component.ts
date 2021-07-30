@@ -19,7 +19,7 @@ export class AddingAssetNewComponent implements OnInit {
   @ViewChild('sellPrice2Grid') sellPrice2Grid: ElementRef;
   @ViewChild('buyPrice2Grid') buyPrice2Grid: ElementRef; 
   @ViewChild('co2Emissions') co2Emissions: ElementRef; 
-  @ViewChild('monthlyPeakCost') monthlyPeakCost: ElementRef; 
+  @ViewChild('monthlyPeakCost') monthlyPeakCost: ElementRef;   
 
   ngOnInit(): void {
   }
@@ -29,7 +29,7 @@ export class AddingAssetNewComponent implements OnInit {
   }
 
   btnClickCancel(){
-    console.log("Btn Cancel clicked");
+    console.log("Btn Cancel clicked");    
     this.maxPowerSell.nativeElement.value = '';
     this.maxPowerBuy.nativeElement.value = '';
     this.sellPrice2Grid.nativeElement.value = '';
