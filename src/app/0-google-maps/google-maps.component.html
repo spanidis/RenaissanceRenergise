@@ -1,0 +1,19 @@
+<div class="container">
+
+    <div>Please select the location of your asset</div>
+  
+    <div class="form-group">
+      <label>Enter address to reach location</label>
+      <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search nearest location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+    </div>
+  
+    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+      <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+        (dragEnd)="markerDragEnd($event)"></agm-marker>
+    </agm-map>
+  
+    <div><strong>Address of point:</strong> {{address}}</div>
+    <div><strong>Latitude:</strong> {{latitude}}</div>
+    <div><strong>Longitude:</strong> {{longitude}}</div>
+    <button class="btn ps_renergise_btn" (click)='storeCoords(latitude, longitude)'>Store Coordinates</button>
+  </div>

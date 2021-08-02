@@ -45,9 +45,18 @@
                 </mat-form-field>                
             </div>
             <div class="col-4 d-grid mx-auto">
-                <fa-icon [icon]="faMapMarkerAlt" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
+                <span (click)='googleMapsShow()'><fa-icon [icon]="faMapMarkerAlt" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon></span>
             </div>
-        </div> 
+        </div>
+        
+        <div class="row pt-1">
+            <div class="col-8 d-grid mx-auto">
+                <div [@inOutAnimation] *ngIf="isGoogleMapsShown" class="row container-fluid"  id="divGMshow" >
+                    <app-google-maps></app-google-maps>
+                </div>               
+            </div>
+            <div class="col-4 d-grid mx-auto"></div>
+        </div>
 
         <div class="row pt-1">
             <div class="col-8 d-grid mx-auto">

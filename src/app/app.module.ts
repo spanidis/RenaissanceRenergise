@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MAT_DATE_LOCALE} from '@angular/material/core';
-import {MatSlideToggleModule, MatSlideToggle} from '@angular/material/slide-toggle';
+import { MatSlideToggleModule, MatSlideToggle} from '@angular/material/slide-toggle';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +33,9 @@ import { AddingConfigFilesComponent } from './4-adding-config-files/adding-confi
 import { ModifyAssetComponent } from './4-modify-asset/modify-asset.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GoogleMapsComponent } from './0-google-maps/google-maps.component';
+
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -55,7 +58,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AddingDataFilesComponent,
     AddingConfigFilesComponent,
     MenuInputDataComponent,
-    ModifyAssetComponent
+    ModifyAssetComponent,
+    GoogleMapsComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +69,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatNativeDateModule,
     MatSlideToggleModule,
     BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCrDH8KL8G1nz2X6K6NS6-zGJVeklrUj_8',
+      libraries: ['places']
+    }),
     RouterModule.forRoot([
       {path: '', component: LandingPageComponent}
     ]),
