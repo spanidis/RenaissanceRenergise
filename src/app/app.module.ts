@@ -15,16 +15,19 @@ import { LeftSideLogoComponent } from './0-left-side-logo/left-side-logo.compone
 import { SocialmediaComponent } from './0-socialmedia/socialmedia.component';
 import { ProfileComponent } from './0-profile/profile.component';
 import { PrivacyPolicyComponent } from './0-privacy-policy/privacy-policy.component';
+import { GoogleMapsComponent } from './0-google-maps/google-maps.component';
 
 import { LandingPageComponent } from './1-landing-page/landing-page.component';
 
 import { LoginComponent } from './2-login/login.component';
 import { SignupComponent } from './2-signup/signup.component';
+import { DemoToolComponent } from './2-demo-tool/demo-tool.component';
 
 import { NewprojectComponent } from './3-new-project/new-project.component';
-import { NewprojectaddComponent } from './new-project-add/new-project-add.component';
+import { NewprojectaddComponent } from './3-new-project-add/new-project-add.component';
 import { UserMainMenuComponent } from './3-user-main-menu/user-main-menu.component';
 import { MenuInputDataComponent } from './3-menu-input-data/menu-input-data.component';
+import { MyprojectsComponent } from './3-myprojects/myprojects.component';
 
 import { AddingAssetGeneralComponent } from './4-general-information/general-information.component';
 import { AddingDataFilesComponent } from './4-adding-data-files/adding-data-files.component';
@@ -33,9 +36,12 @@ import { AddingConfigFilesComponent } from './4-adding-config-files/adding-confi
 import { ModifyAssetComponent } from './4-modify-asset/modify-asset.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GoogleMapsComponent } from './0-google-maps/google-maps.component';
+
 
 import { AgmCoreModule } from '@agm/core';
+import { FaqComponent } from './0-faq/faq.component';
+import { AboutComponent } from './0-about/about.component';
+
 
 
 @NgModule({
@@ -45,8 +51,11 @@ import { AgmCoreModule } from '@agm/core';
     FooterComponent,
     LandingPageComponent,
     SocialmediaComponent,
+    
     LoginComponent,
     SignupComponent,
+    DemoToolComponent,
+    
     ProfileComponent,
     NewprojectComponent,
     NewprojectaddComponent,
@@ -59,7 +68,10 @@ import { AgmCoreModule } from '@agm/core';
     AddingConfigFilesComponent,
     MenuInputDataComponent,
     ModifyAssetComponent,
-    GoogleMapsComponent
+    GoogleMapsComponent,
+    FaqComponent,
+    AboutComponent,
+    MyprojectsComponent
   ],
   imports: [
     BrowserModule,

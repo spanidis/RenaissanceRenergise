@@ -23,4 +23,9 @@ export class LandingPageComponent implements OnInit {
     this.router.navigateByUrl('/login')
   }
 
+  btnDemo(){
+    console.log("Btn Demo clicked");
+    this.router.navigateByUrl('/demo')
+  }
+
 }

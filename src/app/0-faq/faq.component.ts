@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-demo-tool',
-  templateUrl: './demo-tool.component.html',
-  styleUrls: ['./demo-tool.component.css']
+  selector: 'app-faq',
+  templateUrl: './faq.component.html',
+  styleUrls: ['./faq.component.css']
 })
-export class DemoToolComponent implements OnInit {
+export class FaqComponent implements OnInit {
 
   constructor(private router: Router) { }
 
