@@ -37,12 +37,15 @@ import { ModifyAssetComponent } from './4-modify-asset/modify-asset.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 import { AgmCoreModule } from '@agm/core';
 import { FaqComponent } from './0-faq/faq.component';
 import { AboutComponent } from './0-about/about.component';
-
-
+import { NewAsset2StorageComponent } from './4-new-asset-2-storage/new-asset2-storage.component';
+import { NewAsset3GeneratorComponent } from './4-new-asset-3-generator/new-asset3-generator.component';
+import { NewAsset4ChargerComponent } from './4-new-asset-4-charger/new-asset4-charger.component';
+import { NewAsset5BuildingComponent } from './4-new-asset-5-building/new-asset5-building.component';
+import { NewAsset6SolarComponent } from './4-new-asset-6-solar/new-asset6-solar.component';
+import { NewAsset7WindComponent } from './4-new-asset-7-wind/new-asset7-wind.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +74,13 @@ import { AboutComponent } from './0-about/about.component';
     GoogleMapsComponent,
     FaqComponent,
     AboutComponent,
-    MyprojectsComponent
+    MyprojectsComponent,
+    NewAsset2StorageComponent,
+    NewAsset3GeneratorComponent,
+    NewAsset4ChargerComponent,
+    NewAsset5BuildingComponent,
+    NewAsset6SolarComponent,
+    NewAsset7WindComponent
   ],
   imports: [
     BrowserModule,
