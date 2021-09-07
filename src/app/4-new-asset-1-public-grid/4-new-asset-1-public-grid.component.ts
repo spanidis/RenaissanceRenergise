@@ -1,11 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild, ElementRef } from '@angular/core';
+
 import { faSave } from '@fortawesome/free-solid-svg-icons';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-adding-asset-new',
   templateUrl: './4-new-asset-1-public-grid.component.html',
-  styleUrls: ['./4-new-asset-1-public-grid.component.css']
+  styleUrls: ['./4-new-asset-1-public-grid.component.css'],
+  animations: [
+    trigger(
+      'inOutAnimation', 
+      [
+        transition(
+          ':enter', 
+          [
+            style({ height: 0, opacity: 0 }),
+            animate('2s ease-out', 
+                    style({ height: 80, opacity: 1 }))
+          ]
+        ),
+        transition(
+          ':leave', 
+          [
+            style({ height: 80, opacity: 1 }),
+            animate('2s ease-in', 
+                    style({ height: 0, opacity: 0 }))
+          ]
+        )
+      ]
+    )
+  ]
 })
 export class AddingAssetNewComponent implements OnInit {
 

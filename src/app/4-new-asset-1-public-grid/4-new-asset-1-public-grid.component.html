@@ -85,27 +85,29 @@
                 </div>
             </div>
 
-            <div *ngIf="isShown==true" class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <input matInput name="co2Emissions" id="co2Emissions" #co2Emissions type="text" class="form-control ps_renergise_btn" placeholder="CO2 Emissions (in gCO2/KWh)">
-                    </mat-form-field>                
-                </div>
-                <div class="col-4 d-grid mx-auto"></div>
-            </div>
+            <div [@inOutAnimation] *ngIf="isShown==true">
+                <div class="row pt-1">
+                    <div class="col-8 d-grid mx-auto">
+                        <mat-form-field appearance="fill">
+                            <input matInput name="co2Emissions" id="co2Emissions" #co2Emissions type="text" class="form-control ps_renergise_btn" placeholder="CO2 Emissions (in gCO2/KWh)">
+                        </mat-form-field>                
+                    </div>
+                    <div class="col-4 d-grid mx-auto"></div>
+                </div>           
 
-            <div *ngIf="isShown==true" class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <input matInput name="monthlyPeakCost" id="monthlyPeakCost" #monthlyPeakCost type="text" class="form-control ps_renergise_btn" placeholder="Monthly Peak Cost (in &euro;/KWh)">
-                    </mat-form-field>                
+                <div class="row pt-1">
+                    <div class="col-8 d-grid mx-auto">
+                        <mat-form-field appearance="fill">
+                            <input matInput name="monthlyPeakCost" id="monthlyPeakCost" #monthlyPeakCost type="text" class="form-control ps_renergise_btn" placeholder="Monthly Peak Cost (in &euro;/KWh)">
+                        </mat-form-field>                
+                    </div>
+                    <div class="col-4 d-grid mx-auto"></div>
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
             </div>
 
             <div class="row pt-1 pb-2">
                 <div class="col-4 d-grid mx-auto">
-                    <button type="button" class="btn ps_renergise_btn" (click)="btnClickCancel()">Cancel</button>
+                    <button type="button" class="btn ps_renergise_btn" (click)="btnClickCancel()">Clear</button>
                 </div>
             <div class="col-4 d-grid mx-auto">
                 <button type="button" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
