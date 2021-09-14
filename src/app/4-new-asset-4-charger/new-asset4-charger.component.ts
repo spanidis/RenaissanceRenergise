@@ -17,8 +17,8 @@ export class NewAsset4ChargerComponent implements OnInit {
     this.isShown = ! this.isShown;    
   }
 
-  btnClickCancel(){
-    console.log("Btn Cancel clicked");    
+  btnClickClear(){
+    console.log("Btn Clear clicked");    
   }
 
   btnClickAddAsset(){

@@ -53,8 +53,8 @@ export class AddingAssetNewComponent implements OnInit {
     this.isShown = ! this.isShown;    
   }
 
-  btnClickCancel(){
-    console.log("Btn Cancel clicked");    
+  btnClickClear(){
+    console.log("Btn Clear clicked");    
     this.maxPowerSell.nativeElement.value = '';
     this.maxPowerBuy.nativeElement.value = '';
     this.sellPrice2Grid.nativeElement.value = '';

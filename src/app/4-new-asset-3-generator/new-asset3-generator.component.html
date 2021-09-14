@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-4 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
+                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" title="Advanced options" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
                     </mat-form-field>
                 </div>
             </div> 
@@ -48,36 +48,40 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="max_power" id="max_power" #max_power type="text" class="form-control ps_renergise_btn" placeholder="Max power produced [kW]">
+                        <input matInput name="max_power" id="max_power" #max_power type="text" class="form-control ps_renergise_btn" title="Max power produced [kW]" placeholder="Max power produced [kW]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
             </div>
 
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <input matInput name="money_per_kWh" id="money_per_kWh" #money_per_kWh type="text" class="form-control ps_renergise_btn" placeholder="Cost in euros per kWh [€/kWh]">
-                    </mat-form-field>                
+            <div [@inOutAnimation] *ngIf="isShown==true">
+                <div class="row pt-1">
+                    <div class="col-8 d-grid mx-auto">
+                        <mat-form-field appearance="fill">
+                            <input matInput name="money_per_kWh" id="money_per_kWh" #money_per_kWh type="text" class="form-control ps_renergise_btn" title="Cost in euros per kWh [€/kWh]" placeholder="Cost in euros per kWh [€/kWh]">
+                        </mat-form-field>                
+                    </div>
+                    <div class="col-4 d-grid mx-auto"></div>
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
             </div>
-
+            
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="power_profile" id="power_profile" #power_profile type="text" class="form-control ps_renergise_btn" placeholder="Power profile of the asset [kW]">
+                        <input matInput name="power_profile" id="power_profile" #power_profile type="file" class="form-control ps_renergise_btn" title="Power profile of the asset [kW]" placeholder="Power profile of the asset [kW]">
                     </mat-form-field>                
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
+                <div class="col-4 d-grid mx-auto">
+                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                </div>
             </div>
 
             <div class="row pt-1 pb-2">
                 <div class="col-4 d-grid mx-auto">
-                    <button type="button" class="btn ps_renergise_btn" (click)="btnClickCancel()">Clear</button>
+                    <button type="button" title="Clear form" class="btn ps_renergise_btn" (click)="btnClickClear()">Clear</button>
                 </div>
             <div class="col-4 d-grid mx-auto">
-                <button type="button" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
+                <button type="button" title="Add asset" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
             </div>
             <div class="col-4 d-grid mx-auto">
                 

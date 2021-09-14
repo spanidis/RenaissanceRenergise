@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-4 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
+                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" title="Advanced options" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
                     </mat-form-field>
                 </div>
             </div> 
@@ -48,7 +48,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="max_power_sell" id="max_power_sell" #max_power_sell type="text" class="form-control ps_renergise_btn" placeholder="Maximum power the grid can provide [kW]">
+                        <input matInput name="max_power_sell" id="max_power_sell" #max_power_sell type="text" class="form-control ps_renergise_btn" title="Maximum power the grid can provide [kW]" placeholder="Maximum power the grid can provide [kW]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -57,7 +57,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="max_power_buy" id="max_power_buy" #max_power_buy type="text" class="form-control ps_renergise_btn" placeholder="Maximum power the grid can receive [kW]">
+                        <input matInput name="max_power_buy" id="max_power_buy" #max_power_buy type="text" class="form-control ps_renergise_btn" title="Maximum power the grid can receive [kW]" placeholder="Maximum power the grid can receive [kW]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -66,7 +66,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="sell_to_grid" id="sell_to_grid" #sell_to_grid type="file" class="form-control ps_renergise_btn" placeholder="Price at which you sell electricity to the public grid [&euro;/KWh]">
+                        <input matInput name="sell_to_grid" id="sell_to_grid" #sell_to_grid type="file" class="form-control ps_renergise_btn" title="Price at which you sell electricity to the public grid [&euro;/KWh]" placeholder="Price at which you sell electricity to the public grid [&euro;/KWh]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto">
@@ -77,7 +77,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="buy_from_grid" id="buy_from_grid" #buy_from_grid type="file" class="form-control ps_renergise_btn" placeholder="Price at which you buy electricity from the grid [&euro;/KWh]">
+                        <input matInput name="buy_from_grid" id="buy_from_grid" #buy_from_grid type="file" class="form-control ps_renergise_btn" title="Price at which you buy electricity from the grid [&euro;/KWh]" placeholder="Price at which you buy electricity from the grid [&euro;/KWh]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto">
@@ -89,7 +89,7 @@
                 <div class="row pt-1">
                     <div class="col-8 d-grid mx-auto">
                         <mat-form-field appearance="fill">
-                            <input matInput name="CO2_emissions" id="CO2_emissions" #CO2_emissions type="text" class="form-control ps_renergise_btn" placeholder="C02 emissions produced by kWh used [gCO2/kWh]">
+                            <input matInput name="CO2_emissions" id="CO2_emissions" #CO2_emissions type="text" class="form-control ps_renergise_btn" title="C02 emissions produced by kWh used [gCO2/kWh]" placeholder="C02 emissions produced by kWh used [gCO2/kWh]">
                         </mat-form-field>                
                     </div>
                     <div class="col-4 d-grid mx-auto"></div>
@@ -98,7 +98,7 @@
                 <div class="row pt-1">
                     <div class="col-8 d-grid mx-auto">
                         <mat-form-field appearance="fill">
-                            <input matInput name="monthly_peak_cost" id="monthly_peak_cost" #monthly_peak_cost type="text" class="form-control ps_renergise_btn" placeholder="cost for max monthly peak power [&euro;/KWh]">
+                            <input matInput name="monthly_peak_cost" id="monthly_peak_cost" #monthly_peak_cost type="text" class="form-control ps_renergise_btn" title="Cost for max monthly peak power [&euro;/KWh]" placeholder="Cost for max monthly peak power [&euro;/KWh]">
                         </mat-form-field>                
                     </div>
                     <div class="col-4 d-grid mx-auto"></div>
@@ -107,10 +107,10 @@
 
             <div class="row pt-1 pb-2">
                 <div class="col-4 d-grid mx-auto">
-                    <button type="button" class="btn ps_renergise_btn" (click)="btnClickCancel()">Clear</button>
+                    <button type="button" title="Clear form" class="btn ps_renergise_btn" (click)="btnClickClear()">Clear</button>
                 </div>
             <div class="col-4 d-grid mx-auto">
-                <button type="button" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
+                <button type="button" title="Add asset" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
             </div>
             <div class="col-4 d-grid mx-auto">
                 

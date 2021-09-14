@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-4 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
+                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" title="Advanced options" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
                     </mat-form-field>
                 </div>
             </div> 
@@ -48,7 +48,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="size" id="size" #size type="text" class="form-control ps_renergise_btn" placeholder="Energy capacity of the battery [kWh]">
+                        <input matInput name="size" id="size" #size type="text" class="form-control ps_renergise_btn" title="Energy capacity of the battery [kWh]" placeholder="Energy capacity of the battery [kWh]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -57,7 +57,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="soc" id="soc" #soc type="text" class="form-control ps_renergise_btn" placeholder="Current state of charge  of the battery [%]">
+                        <input matInput name="soc" id="soc" #soc type="text" class="form-control ps_renergise_btn" title="Current state of charge  of the battery [%]" placeholder="Current state of charge  of the battery [%]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -66,7 +66,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="soc_min" id="soc_min" #soc_min type="text" class="form-control ps_renergise_btn" placeholder="Minimum stat of charge usable [%]">
+                        <input matInput name="soc_min" id="soc_min" #soc_min type="text" class="form-control ps_renergise_btn" title="Minimum stat of charge usable [%]" placeholder="Minimum stat of charge usable [%]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -75,7 +75,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="soc_max" id="soc_max" #soc_max type="text" class="form-control ps_renergise_btn" placeholder="Maximum state of charge usable [%]">
+                        <input matInput name="soc_max" id="soc_max" #soc_max type="text" class="form-control ps_renergise_btn" title="Maximum state of charge usable [%]" placeholder="Maximum state of charge usable [%]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -84,7 +84,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="charge_eff" id="charge_eff" #charge_eff type="text" class="form-control ps_renergise_btn" placeholder="Efficiency of the charging process [-]">
+                        <input matInput name="charge_eff" id="charge_eff" #charge_eff type="text" class="form-control ps_renergise_btn" title="Efficiency of the charging process [-]" placeholder="Efficiency of the charging process [-]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -93,7 +93,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="disch_eff" id="disch_eff" #disch_eff type="text" class="form-control ps_renergise_btn" placeholder="Efficiency of the discharging process [-]">
+                        <input matInput name="disch_eff" id="disch_eff" #disch_eff type="text" class="form-control ps_renergise_btn" title="Efficiency of the discharging process [-]" placeholder="Efficiency of the discharging process [-]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -102,7 +102,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="max_charge" id="max_charge" #max_charge type="text" class="form-control ps_renergise_btn" placeholder="Maximum C-rate permitted in charging mode [1/h] (kW/kWh)">
+                        <input matInput name="max_charge" id="max_charge" #max_charge type="text" class="form-control ps_renergise_btn" title="Maximum C-rate permitted in charging mode [1/h] (kW/kWh)" placeholder="Maximum C-rate permitted in charging mode [1/h] (kW/kWh)">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -111,20 +111,22 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="power_profile" id="power_profile" #power_profile type="text" class="form-control ps_renergise_btn" placeholder="Power profile of the asset [kW]">
+                        <input matInput name="power_profile" id="power_profile" #power_profile type="file" class="form-control ps_renergise_btn" title="Power profile of the asset [kW]" placeholder="Power profile of the asset [kW]">
                     </mat-form-field>                
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
+                <div class="col-4 d-grid mx-auto">
+                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                </div>
             </div>
             
             
 
             <div class="row pt-1 pb-2">
                 <div class="col-4 d-grid mx-auto">
-                    <button type="button" class="btn ps_renergise_btn" (click)="btnClickCancel()">Clear</button>
+                    <button type="button" title="Clear form" class="btn ps_renergise_btn" (click)="btnClickClear()">Clear</button>
                 </div>
             <div class="col-4 d-grid mx-auto">
-                <button type="button" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
+                <button type="button" title="Add asset" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
             </div>
             <div class="col-4 d-grid mx-auto">
                 

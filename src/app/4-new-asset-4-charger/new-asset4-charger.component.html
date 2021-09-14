@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-4 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
+                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" title="Advanced options" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
                     </mat-form-field>
                 </div>
             </div> 
@@ -48,7 +48,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="efficiency" id="efficiency" #efficiency type="text" class="form-control ps_renergise_btn" placeholder="Efficiency of the charger [???]">
+                        <input matInput name="efficiency" id="efficiency" #efficiency type="text" class="form-control ps_renergise_btn" title="Efficiency of the charger [???]" placeholder="Efficiency of the charger [???]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -57,7 +57,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="max_charge_cp" id="max_charge_cp" #max_charge_cp type="text" class="form-control ps_renergise_btn" placeholder="Maximum power of the charger [kW]">
+                        <input matInput name="max_charge_cp" id="max_charge_cp" #max_charge_cp type="text" class="form-control ps_renergise_btn" title="Maximum power of the charger [kW]" placeholder="Maximum power of the charger [kW]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -66,7 +66,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="max_discharge_cp" id="max_discharge_cp" #max_discharge_cp type="text" class="form-control ps_renergise_btn" placeholder="Maximum discharge power of the charger [kW]">
+                        <input matInput name="max_discharge_cp" id="max_discharge_cp" #max_discharge_cp type="text" class="form-control ps_renergise_btn" title="Maximum discharge power of the charger [kW]" placeholder="Maximum discharge power of the charger [kW]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -75,7 +75,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="kind_cp" id="kind_cp" #kind_cp type="text" class="form-control ps_renergise_btn" placeholder="Normal, smart of bi-directional charger">
+                        <input matInput name="kind_cp" id="kind_cp" #kind_cp type="text" class="form-control ps_renergise_btn" title="Normal, smart of bi-directional charger" placeholder="Normal, smart of bi-directional charger">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -84,45 +84,53 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="energy" id="energy" #energy type="text" class="form-control ps_renergise_btn" placeholder="EV energy need [kWh]">
+                        <input matInput name="energy" id="energy" #energy type="file" class="form-control ps_renergise_btn" title="EV energy need [kWh]" placeholder="EV energy need [kWh]">
                     </mat-form-field>                
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
+                <div class="col-4 d-grid mx-auto">
+                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                </div>
             </div>
 
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="detention" id="detention" #detention type="text" class="form-control ps_renergise_btn" placeholder="Parking time [s]">
+                        <input matInput name="detention" id="detention" #detention type="file" class="form-control ps_renergise_btn" title="Parking time [s]" placeholder="Parking time [s]">
                     </mat-form-field>                
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
+                <div class="col-4 d-grid mx-auto">
+                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                </div>
             </div>
 
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="P_max" id="P_max" #P_max type="text" class="form-control ps_renergise_btn" placeholder="Maximum EV charging power [kW]">
+                        <input matInput name="P_max" id="P_max" #P_max type="file" class="form-control ps_renergise_btn" title="Maximum EV charging power [kW]" placeholder="Maximum EV charging power [kW]">
                     </mat-form-field>                
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
+                <div class="col-4 d-grid mx-auto">
+                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                </div>
             </div>
 
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="kind_session" id="kind_session" #kind_session type="text" class="form-control ps_renergise_btn" placeholder="Normal, smart or bi-directional charging [???]">
+                        <input matInput name="kind_session" id="kind_session" #kind_session type="file" class="form-control ps_renergise_btn" title="Normal, smart or bi-directional charging [???]" placeholder="Normal, smart or bi-directional charging [???]">
                     </mat-form-field>                
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
+                <div class="col-4 d-grid mx-auto">
+                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                </div>
             </div>
 
             <div class="row pt-1 pb-2">
                 <div class="col-4 d-grid mx-auto">
-                    <button type="button" class="btn ps_renergise_btn" (click)="btnClickCancel()">Clear</button>
+                    <button type="button" title="Clear form" class="btn ps_renergise_btn" (click)="btnClickClear()">Clear</button>
                 </div>
             <div class="col-4 d-grid mx-auto">
-                <button type="button" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
+                <button type="button" title="Add asset" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
             </div>
             <div class="col-4 d-grid mx-auto">
                 

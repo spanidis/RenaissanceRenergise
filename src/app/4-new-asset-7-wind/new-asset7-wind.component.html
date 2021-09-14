@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-4 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
+                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" title="Advanced options" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
                     </mat-form-field>
                 </div>
             </div> 
@@ -48,7 +48,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="v_cin" id="v_cin" #v_cin type="text" class="form-control ps_renergise_btn" placeholder="Cut-in speed, minimum wind speed from which the turbine starts to produce energy [m/s]">
+                        <input matInput name="v_cin" id="v_cin" #v_cin type="text" class="form-control ps_renergise_btn" title="Cut-in speed, minimum wind speed from which the turbine starts to produce energy [m/s]" placeholder="Cut-in speed, minimum wind speed from which the turbine starts to produce energy [m/s]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -57,7 +57,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="v_cout" id="v_cout" #v_cout type="text" class="form-control ps_renergise_btn" placeholder="Cut-out speed, maximum wind speed supported by the wind turbine, above this speed the turbine stops to produce energy. [m/s]">
+                        <input matInput name="v_cout" id="v_cout" #v_cout type="text" class="form-control ps_renergise_btn" title="Cut-out speed, maximum wind speed supported by the wind turbine, above this speed the turbine stops to produce energy. [m/s]" placeholder="Cut-out speed, maximum wind speed supported by the wind turbine, above this speed the turbine stops to produce energy. [m/s]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -66,7 +66,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="v_rated" id="v_rated" #v_rated type="text" class="form-control ps_renergise_btn" placeholder="Rated speed, from this speed and above, the turbine produces its nominal power [m/s]">
+                        <input matInput name="v_rated" id="v_rated" #v_rated type="text" class="form-control ps_renergise_btn" title="Rated speed, from this speed and above, the turbine produces its nominal power [m/s]" placeholder="Rated speed, from this speed and above, the turbine produces its nominal power [m/s]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -75,45 +75,51 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="p_rated" id="p_rated" #p_rated type="text" class="form-control ps_renergise_btn" placeholder="Nominal power produced by the turbine when the wind speed is between the rated speed and the cut-out speed [kW]">
+                        <input matInput name="p_rated" id="p_rated" #p_rated type="text" class="form-control ps_renergise_btn" title="Nominal power produced by the turbine when the wind speed is between the rated speed and the cut-out speed [kW]" placeholder="Nominal power produced by the turbine when the wind speed is between the rated speed and the cut-out speed [kW]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
             </div>
 
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <input matInput name="money_per_kWh" id="money_per_kWh" #money_per_kWh type="text" class="form-control ps_renergise_btn" placeholder="Financial compensation perceived per kWh produced, for example green certificates [€/kWh])">
-                    </mat-form-field>                
+            <div [@inOutAnimation] *ngIf="isShown==true">
+                <div class="row pt-1">
+                    <div class="col-8 d-grid mx-auto">
+                        <mat-form-field appearance="fill">
+                            <input matInput name="money_per_kWh" id="money_per_kWh" #money_per_kWh type="text" class="form-control ps_renergise_btn" title="Financial compensation perceived per kWh produced, for example green certificates [€/kWh]" placeholder="Financial compensation perceived per kWh produced, for example green certificates [€/kWh]">
+                        </mat-form-field>                
+                    </div>
+                    <div class="col-4 d-grid mx-auto"></div>
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
             </div>
 
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="wind_speed" id="wind_speed" #wind_speed type="text" class="form-control ps_renergise_btn" placeholder="Outdoor wind speed [m/s]">
+                        <input matInput name="wind_speed" id="wind_speed" #wind_speed type="file" class="form-control ps_renergise_btn" title="Outdoor wind speed [m/s]" placeholder="Outdoor wind speed [m/s]">
                     </mat-form-field>                
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
+                <div class="col-4 d-grid mx-auto">
+                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                </div>
             </div>
 
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="power_profile" id="power_profile" #power_profile type="text" class="form-control ps_renergise_btn" placeholder="Power profile of the asset [kW]">
+                        <input matInput name="power_profile" id="power_profile" #power_profile type="file" class="form-control ps_renergise_btn" title="Power profile of the asset [kW]" placeholder="Power profile of the asset [kW]">
                     </mat-form-field>                
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
-            </div>            
+                <div class="col-4 d-grid mx-auto">
+                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                </div>
+            </div>          
 
             <div class="row pt-1 pb-2">
                 <div class="col-4 d-grid mx-auto">
-                    <button type="button" class="btn ps_renergise_btn" (click)="btnClickCancel()">Clear</button>
+                    <button type="button" title="Clear form" class="btn ps_renergise_btn" (click)="btnClickClear()">Clear</button>
                 </div>
             <div class="col-4 d-grid mx-auto">
-                <button type="button" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
+                <button type="button" title="Add asset" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
             </div>
             <div class="col-4 d-grid mx-auto">
                 

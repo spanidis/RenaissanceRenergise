@@ -40,15 +40,26 @@
                 </div>
                 <div class="col-4 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
+                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" title="Advanced options" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
                     </mat-form-field>
                 </div>
             </div> 
             
+            <div [@inOutAnimation] *ngIf="isShown==true">
+                <div class="row pt-1">
+                    <div class="col-8 d-grid mx-auto">
+                        <mat-form-field appearance="fill">
+                            COORDS LAT LONG
+                        </mat-form-field>                
+                    </div>
+                    <div class="col-4 d-grid mx-auto"></div>
+                </div>
+            </div>
+
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        COORDS LAT LONG
+                        <input matInput name="tilt" id="tilt" #tilt type="text" class="form-control ps_renergise_btn" title="The tilt of the solar pv [°]" placeholder="The tilt of the solar pv [°]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -57,7 +68,7 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="tilt" id="tilt" #tilt type="text" class="form-control ps_renergise_btn" placeholder="The tilt of the solar pv [°]">
+                        <input matInput name="azimuth" id="azimuth" #azimuth type="text" class="form-control ps_renergise_btn" title="The azimuth of the solar pv [°]" placeholder="The azimuth of the solar pv [°]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -66,7 +77,45 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="azimuth" id="azimuth" #azimuth type="text" class="form-control ps_renergise_btn" placeholder="The azimuth of the solar pv [°]">
+                        <input matInput name="tracking" id="tracking" #tracking type="text" class="form-control ps_renergise_btn" title="Is the solar pv a single axis tracking system? [-]" placeholder="Is the solar pv a single axis tracking system? [-]">
+                    </mat-form-field>                
+                </div>
+                <div class="col-4 d-grid mx-auto"></div>
+            </div>
+
+            <div [@inOutAnimation] *ngIf="isShown==true">
+                <div class="row pt-1">
+                    <div class="col-8 d-grid mx-auto">
+                        <mat-form-field appearance="fill">
+                            <input matInput name="module" id="module" #module type="text" class="form-control ps_renergise_btn" title="What kind of module is the solar panel. The DOF contains 6 standard modules, which can be found in data folder. One of the modules should be taken. Other modules can be added to the datafile [-]" placeholder="What kind of module is the solar panel. The DOF contains 6 standard modules, which can be found in data folder. One of the modules should be taken. Other modules can be added to the datafile [-]">
+                        </mat-form-field>                
+                    </div>
+                    <div class="col-4 d-grid mx-auto"></div>
+                </div>            
+
+                <div class="row pt-1">
+                    <div class="col-8 d-grid mx-auto">
+                        <mat-form-field appearance="fill">
+                            <input matInput name="temp_parameters" id="temp_parameters" #temp_parameters type="text" class="form-control ps_renergise_btn" title="How is the solar pv mounted? Options are: 'insulated' or 'free_standing' [-]" placeholder="How is the solar pv mounted? Options are: 'insulated' or 'free_standing' [-]">
+                        </mat-form-field>                
+                    </div>
+                    <div class="col-4 d-grid mx-auto"></div>
+                </div>
+
+                <div class="row pt-1">
+                    <div class="col-8 d-grid mx-auto">
+                        <mat-form-field appearance="fill">
+                            <input matInput name="money_per_kWh" id="money_per_kWh" #money_per_kWh type="text" class="form-control ps_renergise_btn" title="The cost to generate 1 kWh [€/kWh]" placeholder="The cost to generate 1 kWh [€/kWh]">
+                        </mat-form-field>                
+                    </div>
+                    <div class="col-4 d-grid mx-auto"></div>
+                </div>
+            </div>
+
+            <div class="row pt-1">
+                <div class="col-8 d-grid mx-auto">
+                    <mat-form-field appearance="fill">
+                        <input matInput name="installed_capacity_kWp" id="installed_capacity_kWp" #installed_capacity_kWp type="text" class="form-control ps_renergise_btn" title="The max energy output under full solar radiation [kWp]" placeholder="The max energy output under full solar radiation [kWp]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
@@ -75,81 +124,42 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="tracking" id="tracking" #tracking type="text" class="form-control ps_renergise_btn" placeholder="Is the solar pv a single axis tracking system? [-]">
+                        <input matInput name="Temperatures" id="Temperatures" #Temperatures type="file" class="form-control ps_renergise_btn" title="Outdoor temperature [°C]" placeholder="Outdoor temperature [°C]">
                     </mat-form-field>                
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
+                <div class="col-4 d-grid mx-auto">
+                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                </div>
             </div>
 
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="module" id="module" #module type="text" class="form-control ps_renergise_btn" placeholder="what kind of module is the solar panel. The DOF contains 6 standard modules, which can be found in data folder. One of the modules should be taken. Other modules can be added to the datafile [-]">
+                        <input matInput name="Wind_speed" id="Wind_speed" #Wind_speed type="file" class="form-control ps_renergise_btn" title="Outdoor wind speed [m/s]" placeholder="Outdoor wind speed [m/s]">
                     </mat-form-field>                
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
+                <div class="col-4 d-grid mx-auto">
+                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                </div>
             </div>
 
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="temp_parameters" id="temp_parameters" #temp_parameters type="text" class="form-control ps_renergise_btn" placeholder="How is the solar pv mounted? Options are: 'insulated' or 'free_standing' [-]">
+                        <input matInput name="Radiation" id="Radiation" #Radiation type="file" class="form-control ps_renergise_btn" title="Outdoor sun radiation [Wh/m²]" placeholder="Outdoor sun radiation [Wh/m²]">
                     </mat-form-field>                
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
-            </div>
-
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <input matInput name="money_per_kWh" id="money_per_kWh" #money_per_kWh type="text" class="form-control ps_renergise_btn" placeholder="The cost to generate 1 kWh [€/kWh]">
-                    </mat-form-field>                
+                <div class="col-4 d-grid mx-auto">
+                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
                 </div>
-                <div class="col-4 d-grid mx-auto"></div>
-            </div>
-
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <input matInput name="installed_capacity_kWp" id="installed_capacity_kWp" #installed_capacity_kWp type="text" class="form-control ps_renergise_btn" placeholder="The max energy output under full solar radiation [kWp]">
-                    </mat-form-field>                
-                </div>
-                <div class="col-4 d-grid mx-auto"></div>
-            </div>
-
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <input matInput name="Temperatures" id="Temperatures" #Temperatures type="text" class="form-control ps_renergise_btn" placeholder="Outdoor temperature [°C]">
-                    </mat-form-field>                
-                </div>
-                <div class="col-4 d-grid mx-auto"></div>
-            </div>
-
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <input matInput name="Wind_speed" id="Wind_speed" #Wind_speed type="text" class="form-control ps_renergise_btn" placeholder="Outdoor wind speed [m/s]">
-                    </mat-form-field>                
-                </div>
-                <div class="col-4 d-grid mx-auto"></div>
-            </div>
-
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <input matInput name="Radiation" id="Radiation" #Radiation type="text" class="form-control ps_renergise_btn" placeholder="Outdoor sun radiation [Wh/m²]">
-                    </mat-form-field>                
-                </div>
-                <div class="col-4 d-grid mx-auto"></div>
             </div>
             
             <div class="row pt-1 pb-2">
                 <div class="col-4 d-grid mx-auto">
-                    <button type="button" class="btn ps_renergise_btn" (click)="btnClickCancel()">Clear</button>
+                    <button type="button" title="Clear form" class="btn ps_renergise_btn" (click)="btnClickClear()">Clear</button>
                 </div>
             <div class="col-4 d-grid mx-auto">
-                <button type="button" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
+                <button type="button" title="Add asset" class="btn ps_renergise_btn" (click)="btnClickAddAsset()">Add Asset</button>
             </div>
             <div class="col-4 d-grid mx-auto">
                 
