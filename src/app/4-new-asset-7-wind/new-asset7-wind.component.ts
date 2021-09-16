@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faFile } from '@fortawesome/free-solid-svg-icons';
+import { ViewChild, ElementRef } from '@angular/core';
 
 import { trigger, style, animate, transition } from '@angular/animations';
 
@@ -33,7 +35,16 @@ import { trigger, style, animate, transition } from '@angular/animations';
 export class NewAsset7WindComponent implements OnInit {
 
   constructor() { }
+  faFile = faFile;
 
+  @ViewChild('v_cin') v_cin: ElementRef;
+  @ViewChild('v_cout') v_cout: ElementRef;
+  @ViewChild('v_rated') v_rated: ElementRef;
+  @ViewChild('p_rated') p_rated: ElementRef; 
+  @ViewChild('money_per_kWh') money_per_kWh: ElementRef; 
+  @ViewChild('wind_speed') wind_speed: ElementRef; 
+  @ViewChild('power_profile') power_profile: ElementRef; 
+  
   ngOnInit(): void {
   }
 
@@ -43,7 +54,27 @@ export class NewAsset7WindComponent implements OnInit {
   }
 
   btnClickClear(){
-    console.log("Btn Clear clicked");    
+    if (this.isShown)
+    {
+      console.log("Btn Clear clicked - Full"); 
+      this.v_cin.nativeElement.value = '';
+      this.v_cout.nativeElement.value = '';
+      this.v_rated.nativeElement.value = '';
+      this.p_rated.nativeElement.value = '';
+      this.money_per_kWh.nativeElement.value = '';
+      this.wind_speed.nativeElement.value = '';
+      this.power_profile.nativeElement.value = '';
+    }
+    else
+    {
+      console.log("Btn Clear clicked - Short"); 
+      this.v_cin.nativeElement.value = '';
+      this.v_cout.nativeElement.value = '';
+      this.v_rated.nativeElement.value = '';
+      this.p_rated.nativeElement.value = '';
+      this.wind_speed.nativeElement.value = '';
+      this.power_profile.nativeElement.value = '';
+    }   
   }
 
   btnClickAddAsset(){

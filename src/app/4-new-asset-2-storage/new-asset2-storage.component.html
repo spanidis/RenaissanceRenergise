@@ -39,9 +39,9 @@
                     <div>Nam eu turpis at nibh consequat placerat. Praesent eu est hendrerit, pharetra ligula ut, semper nisl. Nam libero nisi, consectetur sed varius eget, mollis id nisi. </div>
                 </div>
                 <div class="col-4 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
+                    <!--<mat-form-field appearance="fill">
                         <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" title="Advanced options" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
-                    </mat-form-field>
+                    </mat-form-field>-->
                 </div>
             </div> 
             
@@ -111,15 +111,14 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="power_profile" id="power_profile" #power_profile type="file" class="form-control ps_renergise_btn" title="Power profile of the asset [kW]" placeholder="Power profile of the asset [kW]">
+                        <label class="form-control ps_renergise_btn" title="Power profile of the asset [kW]" for="power_profile">Power profile of the asset [kW]</label>
+                        <input matInput name="power_profile" id="power_profile" #power_profile type="file" class="ps_hidden form-control ps_renergise_btn" title="Power profile of the asset [kW]" placeholder="Power profile of the asset [kW]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto">
-                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                    <fa-icon mat-raised-button [icon]="faFile" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
                 </div>
-            </div>
-            
-            
+            </div>     
 
             <div class="row pt-1 pb-2">
                 <div class="col-4 d-grid mx-auto">

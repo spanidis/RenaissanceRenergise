@@ -66,26 +66,29 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="sell_to_grid" id="sell_to_grid" #sell_to_grid type="file" class="form-control ps_renergise_btn" title="Price at which you sell electricity to the public grid [&euro;/KWh]" placeholder="Price at which you sell electricity to the public grid [&euro;/KWh]">
+                        <label class="form-control ps_renergise_btn" title="Price at which you sell electricity to the public grid [&euro;/KWh]" for="sell_to_grid">Price you sell electricity to the public grid [&euro;/KWh]</label>
+                        <input matInput name="sell_to_grid" id="sell_to_grid" #sell_to_grid type="file" class="ps_hidden form-control ps_renergise_btn" title="Price at which you sell electricity to the public grid [&euro;/KWh]" placeholder="Price at which you sell electricity to the public grid [&euro;/KWh]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto">
-                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                    <fa-icon mat-raised-button [icon]="faFile" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
                 </div>
             </div>
 
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="buy_from_grid" id="buy_from_grid" #buy_from_grid type="file" class="form-control ps_renergise_btn" title="Price at which you buy electricity from the grid [&euro;/KWh]" placeholder="Price at which you buy electricity from the grid [&euro;/KWh]">
+                        <label class="form-control ps_renergise_btn" title="Price at which you buy electricity from the grid [&euro;/KWh]" for="buy_from_grid">Price you buy electricity from the grid [&euro;/KWh]</label>
+                        <input matInput name="buy_from_grid" id="buy_from_grid" #buy_from_grid type="file" class="ps_hidden form-control ps_renergise_btn" title="Price at which you buy electricity from the grid [&euro;/KWh]" placeholder="Price at which you buy electricity from the grid [&euro;/KWh]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto">
-                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                    <fa-icon mat-raised-button [icon]="faFile" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
                 </div>
             </div>
 
             <div [@inOutAnimation] *ngIf="isShown==true">
+                                
                 <div class="row pt-1">
                     <div class="col-8 d-grid mx-auto">
                         <mat-form-field appearance="fill">
@@ -93,7 +96,7 @@
                         </mat-form-field>                
                     </div>
                     <div class="col-4 d-grid mx-auto"></div>
-                </div>           
+                </div>
 
                 <div class="row pt-1">
                     <div class="col-8 d-grid mx-auto">

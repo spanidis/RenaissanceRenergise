@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faFile } from '@fortawesome/free-solid-svg-icons';
+import { ViewChild, ElementRef } from '@angular/core';
 
 import { trigger, style, animate, transition } from '@angular/animations';
 
@@ -33,7 +35,12 @@ import { trigger, style, animate, transition } from '@angular/animations';
 export class NewAsset3GeneratorComponent implements OnInit {
 
   constructor() { }
+  faFile = faFile;
 
+  @ViewChild('max_power') max_power: ElementRef;
+  @ViewChild('money_per_kWh') money_per_kWh: ElementRef;
+  @ViewChild('power_profile') power_profile: ElementRef;
+  
   ngOnInit(): void {
   }
 
@@ -42,12 +49,23 @@ export class NewAsset3GeneratorComponent implements OnInit {
     this.isShown = ! this.isShown;    
   }
 
-  btnClickClear(){
-    console.log("Btn Clear clicked");    
+  btnClickClear(){    
+    if (this.isShown)
+    {
+      console.log("Btn Clear clicked - Full"); 
+      this.max_power.nativeElement.value = '';  
+      this.money_per_kWh.nativeElement.value = '';  
+      this.power_profile.nativeElement.value = '';
+    }
+    else
+    {
+      console.log("Btn Clear clicked - Short"); 
+      this.max_power.nativeElement.value = '';  
+      this.power_profile.nativeElement.value = '';
+    }  
   }
 
   btnClickAddAsset(){
     console.log("Btn Add Asset clicked");
-    //this.router.navigateByUrl('/newprojectadd');
   }
 }

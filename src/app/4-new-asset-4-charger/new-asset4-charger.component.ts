@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faFile } from '@fortawesome/free-solid-svg-icons';
+import { ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-new-asset4-charger',
@@ -8,6 +10,16 @@ import { Component, OnInit } from '@angular/core';
 export class NewAsset4ChargerComponent implements OnInit {
 
   constructor() { }
+  faFile = faFile;
+
+  @ViewChild('efficiency') efficiency: ElementRef;
+  @ViewChild('max_charge_cp') max_charge_cp: ElementRef;
+  @ViewChild('max_discharge_cp') max_discharge_cp: ElementRef;
+  @ViewChild('kind_cp') kind_cp: ElementRef;
+  @ViewChild('energy') energy: ElementRef;
+  @ViewChild('detention') detention: ElementRef;
+  @ViewChild('P_max') P_max: ElementRef;
+  @ViewChild('kind_session') kind_session: ElementRef;
 
   ngOnInit(): void {
   }
@@ -18,7 +30,15 @@ export class NewAsset4ChargerComponent implements OnInit {
   }
 
   btnClickClear(){
-    console.log("Btn Clear clicked");    
+    console.log("Btn Clear clicked");  
+    this.efficiency.nativeElement.value = '';  
+    this.max_charge_cp.nativeElement.value = '';  
+    this.max_discharge_cp.nativeElement.value = '';  
+    this.kind_cp.nativeElement.value = '';  
+    this.energy.nativeElement.value = '';  
+    this.detention.nativeElement.value = '';  
+    this.P_max.nativeElement.value = '';  
+    this.kind_session.nativeElement.value = '';   
   }
 
   btnClickAddAsset(){

@@ -49,11 +49,22 @@
                 <div class="row pt-1">
                     <div class="col-8 d-grid mx-auto">
                         <mat-form-field appearance="fill">
-                            COORDS LAT LONG
+                            <input matInput (click)='googleMapsShow()' name="solarLocation" id="solarLocation" #solarLocation type="text" class="form-control ps_renergise_btn" placeholder="Location">
                         </mat-form-field>                
                     </div>
-                    <div class="col-4 d-grid mx-auto"></div>
+                    <div class="col-4 d-grid mx-auto">
+                        <fa-icon [icon]="faMapMarkerAlt" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
+                    </div>
                 </div>
+            </div>
+
+            <div class="row pt-1">
+                <div class="col-8 d-grid mx-auto">
+                    <div [@inOutAnimation] *ngIf="isGoogleMapsShown" class="row container-fluid"  id="divGMshow" >
+                        <app-google-maps></app-google-maps>
+                    </div>               
+                </div>
+                <div class="col-4 d-grid mx-auto"></div>
             </div>
 
             <div class="row pt-1">
@@ -124,33 +135,36 @@
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="Temperatures" id="Temperatures" #Temperatures type="file" class="form-control ps_renergise_btn" title="Outdoor temperature [°C]" placeholder="Outdoor temperature [°C]">
+                        <label class="form-control ps_renergise_btn" title="Outdoor temperature [°C]" for="Temperatures">Outdoor temperature [°C]</label>
+                        <input matInput name="Temperatures" id="Temperatures" #Temperatures type="file" class="ps_hidden form-control ps_renergise_btn" title="Outdoor temperature [°C]" placeholder="Outdoor temperature [°C]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto">
-                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                    <fa-icon mat-raised-button [icon]="faFile" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
                 </div>
             </div>
 
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="Wind_speed" id="Wind_speed" #Wind_speed type="file" class="form-control ps_renergise_btn" title="Outdoor wind speed [m/s]" placeholder="Outdoor wind speed [m/s]">
+                        <label class="form-control ps_renergise_btn" title="Outdoor wind speed [m/s]" for="Wind_speed">Outdoor wind speed [m/s]</label>
+                        <input matInput name="Wind_speed" id="Wind_speed" #Wind_speed type="file" class="ps_hidden form-control ps_renergise_btn" title="Outdoor wind speed [m/s]" placeholder="Outdoor wind speed [m/s]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto">
-                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                    <fa-icon mat-raised-button [icon]="faFile" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
                 </div>
             </div>
 
             <div class="row pt-1">
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
-                        <input matInput name="Radiation" id="Radiation" #Radiation type="file" class="form-control ps_renergise_btn" title="Outdoor sun radiation [Wh/m²]" placeholder="Outdoor sun radiation [Wh/m²]">
+                        <label class="form-control ps_renergise_btn" title="Outdoor sun radiation [Wh/m²]" for="Radiation">Outdoor sun radiation [Wh/m²]</label>
+                        <input matInput name="Radiation" id="Radiation" #Radiation type="file" class="ps_hidden form-control ps_renergise_btn" title="Outdoor sun radiation [Wh/m²]" placeholder="Outdoor sun radiation [Wh/m²]">
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto">
-                    <!--<fa-icon mat-raised-button [icon]="faSave" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>-->
+                    <fa-icon mat-raised-button [icon]="faFile" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
                 </div>
             </div>
             

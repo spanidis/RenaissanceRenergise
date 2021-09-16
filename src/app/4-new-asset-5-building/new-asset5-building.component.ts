@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faFile } from '@fortawesome/free-solid-svg-icons';
+import { ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-new-asset5-building',
@@ -8,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class NewAsset5BuildingComponent implements OnInit {
 
   constructor() { }
-
+  faFile = faFile;
+  
   ngOnInit(): void {
   }
 
@@ -18,7 +21,7 @@ export class NewAsset5BuildingComponent implements OnInit {
   }
 
   btnClickClear(){
-    console.log("Btn Clear clicked");    
+    console.log("Btn Clear clicked");  
   }
 
   btnClickAddAsset(){

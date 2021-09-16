@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ViewChild, ElementRef } from '@angular/core'
+import { ViewChild, ElementRef } from '@angular/core';
 
 import { faMapMarkerAlt, faCalendarWeek, faClock } from '@fortawesome/free-solid-svg-icons';
 import { CoordinatesInteractionService } from '../coordinates-interaction.service';

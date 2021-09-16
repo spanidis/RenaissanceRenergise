@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild, ElementRef } from '@angular/core';
 
-import { faSave } from '@fortawesome/free-solid-svg-icons';
+import { faSave, faFile } from '@fortawesome/free-solid-svg-icons';
 import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -37,14 +37,15 @@ export class AddingAssetNewComponent implements OnInit {
   constructor() { }
 
   faSave = faSave;
+  faFile = faFile;
   isShown: boolean = false ; // hidden by default
 
-  @ViewChild('maxPowerSell') maxPowerSell: ElementRef;
-  @ViewChild('maxPowerBuy') maxPowerBuy: ElementRef;
-  @ViewChild('sellPrice2Grid') sellPrice2Grid: ElementRef;
-  @ViewChild('buyPrice2Grid') buyPrice2Grid: ElementRef; 
-  @ViewChild('co2Emissions') co2Emissions: ElementRef; 
-  @ViewChild('monthlyPeakCost') monthlyPeakCost: ElementRef;   
+  @ViewChild('max_power_sell') max_power_sell: ElementRef;
+  @ViewChild('max_power_buy') max_power_buy: ElementRef;
+  @ViewChild('sell_to_grid') sell_to_grid: ElementRef;
+  @ViewChild('buy_from_grid') buy_from_grid: ElementRef; 
+  @ViewChild('CO2_emissions') CO2_emissions: ElementRef; 
+  @ViewChild('monthly_peak_cost') monthly_peak_cost: ElementRef;   
 
   ngOnInit(): void {
   }
@@ -54,17 +55,28 @@ export class AddingAssetNewComponent implements OnInit {
   }
 
   btnClickClear(){
-    console.log("Btn Clear clicked");    
-    this.maxPowerSell.nativeElement.value = '';
-    this.maxPowerBuy.nativeElement.value = '';
-    this.sellPrice2Grid.nativeElement.value = '';
-    this.buyPrice2Grid.nativeElement.value = '';
-    this.co2Emissions.nativeElement.value = '';
-    this.monthlyPeakCost.nativeElement.value = '';
+    if (this.isShown)
+    {
+      console.log("Btn Clear clicked - Full"); 
+      this.max_power_sell.nativeElement.value = '';
+      this.max_power_buy.nativeElement.value = '';
+      this.sell_to_grid.nativeElement.value = '';
+      this.buy_from_grid.nativeElement.value = '';
+      this.CO2_emissions.nativeElement.value = '';
+      this.monthly_peak_cost.nativeElement.value = '';
+    }
+    else
+    {
+      console.log("Btn Clear clicked - Short"); 
+      this.max_power_sell.nativeElement.value = '';
+      this.max_power_buy.nativeElement.value = '';
+      this.sell_to_grid.nativeElement.value = '';
+      this.buy_from_grid.nativeElement.value = '';
+    }    
   }
 
   btnClickAddAsset(){
     console.log("Btn Add Asset clicked");
-    //this.router.navigateByUrl('/newprojectadd');
+    
   }
 }
