@@ -20,6 +20,6 @@ export class ProfileComponent implements OnInit {
 
   btnClickSignupSave(){
     console.log("Btn SignupSave clicked");
-    this.router.navigateByUrl('/newprojectadd');
+    this.router.navigateByUrl('/myprojects');
   }
 }

@@ -6,6 +6,11 @@ import { CoordinatesInteractionService } from '../coordinates-interaction.servic
 
 import { trigger, style, animate, transition } from '@angular/animations';
 
+interface Tracking {
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-new-asset6-solar',
   templateUrl: './new-asset6-solar.component.html',
@@ -112,4 +117,9 @@ export class NewAsset6SolarComponent implements OnInit {
     console.log("Btn isGoogleMapsShown clicked: " + this.isGoogleMapsShown);
     this.isGoogleMapsShown = ! this.isGoogleMapsShown;
   }
+
+  trackings: Tracking[] = [
+    {value: 'true', viewValue: 'True'},
+    {value: 'false', viewValue: 'False'}
+  ];
 }

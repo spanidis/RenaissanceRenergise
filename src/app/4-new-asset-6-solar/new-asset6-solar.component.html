@@ -89,6 +89,12 @@
                 <div class="col-8 d-grid mx-auto">
                     <mat-form-field appearance="fill">
                         <input matInput name="tracking" id="tracking" #tracking type="text" class="form-control ps_renergise_btn" title="Is the solar pv a single axis tracking system? [-]" placeholder="Is the solar pv a single axis tracking system? [-]">
+                        <mat-label>Favorite food</mat-label>
+                        <mat-select class="form-control ps_renergise_btn">
+                            <mat-option *ngFor="let tracking of trackings" [value]="tracking.value">
+                            {{tracking.viewValue}}
+                            </mat-option>
+                        </mat-select>
                     </mat-form-field>                
                 </div>
                 <div class="col-4 d-grid mx-auto"></div>
