@@ -5,6 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MAT_DATE_LOCALE} from '@angular/material/core';
 import { MatSlideToggleModule, MatSlideToggle} from '@angular/material/slide-toggle';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -84,6 +85,8 @@ import { NewAsset7WindComponent } from './4-new-asset-7-wind/new-asset7-wind.com
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     FontAwesomeModule,
     MatDatepickerModule, 
@@ -92,6 +95,7 @@ import { NewAsset7WindComponent } from './4-new-asset-7-wind/new-asset7-wind.com
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCrDH8KL8G1nz2X6K6NS6-zGJVeklrUj_8',
+      //apiKey: 'AIzaSyBF8l5aQh78TVYTJl8Ey3CRSfx2dKbDLWs',
       libraries: ['places']
     }),
     RouterModule.forRoot([

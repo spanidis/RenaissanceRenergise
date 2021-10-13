@@ -9,11 +9,11 @@
         <!--social media row-->
         <!--faceboot twitter in-->
         <app-socialmedia></app-socialmedia>
-        <form>
+        <form [formGroup]="loginForm" (ngSubmit)="btnClickLogIn()">
           <div class="form-group">
             <div class="row pt-4">                 
               <div class="col-6 d-grid mx-auto">
-                <input required ngModel name="loginEmail" id="loginEmail" type="email" class="form-control ps_renergise_btn" placeholder="Email">
+                <input required formControlName="loginName" name="loginName" id="loginName" type="text" class="form-control ps_renergise_btn" placeholder="Username">
               </div>
               <div class="col-6 d-grid mx-auto"></div>
             </div>
@@ -21,7 +21,7 @@
           <div class="form-group">
             <div class="row pt-1">                
               <div class="col-6 d-grid mx-auto">
-                <input required ngModel name="loginPassword" id="loginPassword" type="password" class="form-control ps_renergise_btn" placeholder="Password">
+                <input required formControlName="loginPassword" name="loginPassword" id="loginPassword" type="password" class="form-control ps_renergise_btn" placeholder="Password">
               </div>
               <div class="col-6 d-grid mx-auto"></div>
             </div>
@@ -37,6 +37,11 @@
           <div class="col-6 d-grid mx-auto"></div>
         </div>
 
+        <div class="row pt-1">
+          <div class="col-6 d-grid mx-auto" *ngIf="isLoggedIn==false">
+            <div class="alert alert-danger" role="alert">Incorrect username or password. Please try again.</div>
+          </div>
+          <div class="col-6 d-grid mx-auto"></div>
       </div>
   </div>
 </div>

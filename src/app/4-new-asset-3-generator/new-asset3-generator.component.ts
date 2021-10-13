@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { ViewChild, ElementRef } from '@angular/core';
+import { GlobalConstants } from '../common/global-constants';
+import { FormBuilder } from '@angular/forms';
 
 import { trigger, style, animate, transition } from '@angular/animations';
 
@@ -34,12 +36,22 @@ import { trigger, style, animate, transition } from '@angular/animations';
 })
 export class NewAsset3GeneratorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
   faFile = faFile;
 
   @ViewChild('max_power') max_power: ElementRef;
   @ViewChild('money_per_kWh') money_per_kWh: ElementRef;
   @ViewChild('power_profile') power_profile: ElementRef;
+  
+  description = GlobalConstants.assetDescription;
+  question = GlobalConstants.assetQuestion;
+  answer = GlobalConstants.assetAnswer;
+
+  generatorForm = this.fb.group({
+    max_power: [''],
+    money_per_kWh: [''],
+    power_profile: ['']
+  });
   
   ngOnInit(): void {
   }

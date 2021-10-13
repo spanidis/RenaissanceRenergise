@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { ViewChild, ElementRef } from '@angular/core';
+import { GlobalConstants } from '../common/global-constants';
+import { FormBuilder } from '@angular/forms';
 
 import { trigger, style, animate, transition } from '@angular/animations';
 
@@ -34,7 +36,7 @@ import { trigger, style, animate, transition } from '@angular/animations';
 })
 export class NewAsset7WindComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
   faFile = faFile;
 
   @ViewChild('v_cin') v_cin: ElementRef;
@@ -45,6 +47,20 @@ export class NewAsset7WindComponent implements OnInit {
   @ViewChild('wind_speed') wind_speed: ElementRef; 
   @ViewChild('power_profile') power_profile: ElementRef; 
   
+  description = GlobalConstants.assetDescription;
+  question = GlobalConstants.assetQuestion;
+  answer = GlobalConstants.assetAnswer;
+  
+  windForm = this.fb.group({
+    v_cin: [''],
+    v_cout: [''],
+    v_rated: [''],
+    p_rated: [''],
+    money_per_kWh: [''],
+    wind_speed: [''],
+    power_profile: ['']
+  });
+
   ngOnInit(): void {
   }
 

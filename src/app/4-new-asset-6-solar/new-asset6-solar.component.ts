@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild, ElementRef } from '@angular/core';
+import { GlobalConstants } from '../common/global-constants';
+import { FormBuilder } from '@angular/forms';
 
 import { faMapMarkerAlt, faCalendarWeek, faClock, faFile } from '@fortawesome/free-solid-svg-icons';
 import { CoordinatesInteractionService } from '../coordinates-interaction.service';
@@ -42,7 +44,8 @@ interface Tracking {
 export class NewAsset6SolarComponent implements OnInit {
 
   constructor(
-    private _coordinatesInteraction: CoordinatesInteractionService
+    private _coordinatesInteraction: CoordinatesInteractionService,
+    private fb: FormBuilder
     ) { }
 
   faMapMarkerAlt = faMapMarkerAlt;
@@ -50,6 +53,20 @@ export class NewAsset6SolarComponent implements OnInit {
   faClock = faClock;
   faFile = faFile;
   isGoogleMapsShown: boolean = false; //initialize it to false - not to be shown in the loading of the page
+
+  solarForm = this.fb.group({
+    solarLocation: [''],
+    tilt: [''],
+    azimuth: [''],
+    tracking: [''],
+    module: [''],
+    temp_parameters: [''],
+    money_per_kWh: [''],
+    installed_capacity_kWp: [''],
+    Temperatures: [''],
+    Wind_speed: [''],
+    Radiation: ['']
+  });
   
   @ViewChild('solarLocation') solarLocation: ElementRef;
   @ViewChild('tilt') tilt: ElementRef;
@@ -63,6 +80,10 @@ export class NewAsset6SolarComponent implements OnInit {
   @ViewChild('Wind_speed') Wind_speed: ElementRef;
   @ViewChild('Radiation') Radiation: ElementRef;
 
+  description = GlobalConstants.assetDescription;
+  question = GlobalConstants.assetQuestion;
+  answer = GlobalConstants.assetAnswer;
+  
   ngOnInit(): void {
     this._coordinatesInteraction.coordsMessage$.subscribe(
       message => {

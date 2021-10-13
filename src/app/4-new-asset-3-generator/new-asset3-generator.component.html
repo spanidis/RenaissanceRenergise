@@ -26,56 +26,61 @@
             </div> 
         </div>
           
-        <div class="col-md-6 ps_form rounded ps_white">
-            <div class="row pt-4">
-                <app-menu-input-data></app-menu-input-data>
-                <h1><img class="img-fluid ps_imgsize" title="Import Data Files" src="assets/images/1x/newAssetImage.png"> New asset: Gas Turbine</h1>
-                <h2>Please insert the data.</h2>
-            </div>            
-                     
-            <div class="row">
-                <div class="col-8 d-grid mx-auto">
-                    <div class="ps_logo_green">How do I create a new asset?</div>
-                    <div>Nam eu turpis at nibh consequat placerat. Praesent eu est hendrerit, pharetra ligula ut, semper nisl. Nam libero nisi, consectetur sed varius eget, mollis id nisi. </div>
-                </div>
-                <div class="col-4 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" title="Advanced options" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
-                    </mat-form-field>
-                </div>
-            </div> 
-            
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <input matInput name="max_power" id="max_power" #max_power type="text" class="form-control ps_renergise_btn" title="Max power produced [kW]" placeholder="Max power produced [kW]">
-                    </mat-form-field>                
-                </div>
-                <div class="col-4 d-grid mx-auto"></div>
-            </div>
+        <div class="col-md-6 ps_form rounded ps_white"> 
+            <form [formGroup]="generatorForm" (ngSubmit)="btnClickAddAsset()">
+                <div class="form-group">
 
-            <div [@inOutAnimation] *ngIf="isShown==true">
-                <div class="row pt-1">
-                    <div class="col-8 d-grid mx-auto">
-                        <mat-form-field appearance="fill">
-                            <input matInput name="money_per_kWh" id="money_per_kWh" #money_per_kWh type="text" class="form-control ps_renergise_btn" title="Cost in euros per kWh [€/kWh]" placeholder="Cost in euros per kWh [€/kWh]">
-                        </mat-form-field>                
+                    <div class="row pt-4">
+                        <app-menu-input-data></app-menu-input-data>
+                        <h1><img class="img-fluid ps_imgsize" title="Import Data Files" src="assets/images/1x/newAssetImage.png"> New asset: Gas Turbine</h1>
+                        <h2>{{ description }}</h2>
+                    </div>            
+                            
+                    <div class="row">
+                        <div class="col-8 d-grid mx-auto">
+                            <div class="ps_logo_green">{{ question }}</div>
+                            <div>{{ answer }}</div>
+                        </div>
+                        <div class="col-4 d-grid mx-auto">
+                            <mat-form-field appearance="fill">
+                                <mat-slide-toggle title="Advanced options" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
+                            </mat-form-field>
+                        </div>
+                    </div> 
+                    
+                    <div class="row pt-1">
+                        <div class="col-8 d-grid mx-auto">
+                            <mat-form-field appearance="fill">
+                                <input matInput formControlName="max_power" name="max_power" id="max_power" #max_power type="text" class="form-control ps_renergise_btn" title="Max power produced [kW]" placeholder="Max power produced [kW]">
+                            </mat-form-field>                
+                        </div>
+                        <div class="col-4 d-grid mx-auto"></div>
                     </div>
-                    <div class="col-4 d-grid mx-auto"></div>
+
+                    <div [@inOutAnimation] *ngIf="isShown==true">
+                        <div class="row pt-1">
+                            <div class="col-8 d-grid mx-auto">
+                                <mat-form-field appearance="fill">
+                                    <input matInput formControlName="money_per_kWh" name="money_per_kWh" id="money_per_kWh" #money_per_kWh type="text" class="form-control ps_renergise_btn" title="Cost in euros per kWh [€/kWh]" placeholder="Cost in euros per kWh [€/kWh]">
+                                </mat-form-field>                
+                            </div>
+                            <div class="col-4 d-grid mx-auto"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="row pt-1">
+                        <div class="col-8 d-grid mx-auto">
+                            <mat-form-field appearance="fill">
+                                <label class="form-control ps_renergise_btn" title="Power profile of the asset [kW]" for="power_profile">Power profile of the asset [kW]</label>
+                                <input matInput formControlName="power_profile" name="power_profile" id="power_profile" #power_profile type="file" class="ps_hidden form-control ps_renergise_btn" title="Power profile of the asset [kW]" placeholder="Power profile of the asset [kW]">
+                            </mat-form-field>                
+                        </div>
+                        <div class="col-4 d-grid mx-auto">
+                            <fa-icon mat-raised-button [icon]="faFile" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <label class="form-control ps_renergise_btn" title="Power profile of the asset [kW]" for="power_profile">Power profile of the asset [kW]</label>
-                        <input matInput name="power_profile" id="power_profile" #power_profile type="file" class="ps_hidden form-control ps_renergise_btn" title="Power profile of the asset [kW]" placeholder="Power profile of the asset [kW]">
-                    </mat-form-field>                
-                </div>
-                <div class="col-4 d-grid mx-auto">
-                    <fa-icon mat-raised-button [icon]="faFile" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
-                </div>
-            </div>
+            </form>
 
             <div class="row pt-1 pb-2">
                 <div class="col-4 d-grid mx-auto">

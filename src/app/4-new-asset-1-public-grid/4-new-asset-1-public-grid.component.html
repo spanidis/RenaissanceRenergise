@@ -25,88 +25,93 @@
                 <div class="col-md-4 d-grid mx-auto"></div>
             </div> 
         </div>
-          
+        
         <div class="col-md-6 ps_form rounded ps_white">
-            <div class="row pt-4">
-                <app-menu-input-data></app-menu-input-data>
-                <h1><img class="img-fluid ps_imgsize" title="Import Data Files" src="assets/images/1x/newAssetImage.png"> New asset: Public Grid</h1>
-                <h2>Please insert the data.</h2>
-            </div>            
-                     
-            <div class="row">
-                <div class="col-8 d-grid mx-auto">
-                    <div class="ps_logo_green">How do I create a new asset?</div>
-                    <div>Nam eu turpis at nibh consequat placerat. Praesent eu est hendrerit, pharetra ligula ut, semper nisl. Nam libero nisi, consectetur sed varius eget, mollis id nisi. </div>
-                </div>
-                <div class="col-4 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <mat-slide-toggle name="publicGridAnvnanced" formControlName="publicGridAnvnanced" id="publicGridAnvnanced" title="Advanced options" #publicGridAnvnanced (change)="toggleShow()">Advanced</mat-slide-toggle>                        
-                    </mat-form-field>
-                </div>
-            </div> 
-            
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <input matInput name="max_power_sell" id="max_power_sell" #max_power_sell type="text" class="form-control ps_renergise_btn" title="Maximum power the grid can provide [kW]" placeholder="Maximum power the grid can provide [kW]">
-                    </mat-form-field>                
-                </div>
-                <div class="col-4 d-grid mx-auto"></div>
-            </div>
 
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <input matInput name="max_power_buy" id="max_power_buy" #max_power_buy type="text" class="form-control ps_renergise_btn" title="Maximum power the grid can receive [kW]" placeholder="Maximum power the grid can receive [kW]">
-                    </mat-form-field>                
-                </div>
-                <div class="col-4 d-grid mx-auto"></div>
-            </div>
-
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <label class="form-control ps_renergise_btn" title="Price at which you sell electricity to the public grid [&euro;/KWh]" for="sell_to_grid">Price you sell electricity to the public grid [&euro;/KWh]</label>
-                        <input matInput name="sell_to_grid" id="sell_to_grid" #sell_to_grid type="file" class="ps_hidden form-control ps_renergise_btn" title="Price at which you sell electricity to the public grid [&euro;/KWh]" placeholder="Price at which you sell electricity to the public grid [&euro;/KWh]">
-                    </mat-form-field>                
-                </div>
-                <div class="col-4 d-grid mx-auto">
-                    <fa-icon mat-raised-button [icon]="faFile" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
-                </div>
-            </div>
-
-            <div class="row pt-1">
-                <div class="col-8 d-grid mx-auto">
-                    <mat-form-field appearance="fill">
-                        <label class="form-control ps_renergise_btn" title="Price at which you buy electricity from the grid [&euro;/KWh]" for="buy_from_grid">Price you buy electricity from the grid [&euro;/KWh]</label>
-                        <input matInput name="buy_from_grid" id="buy_from_grid" #buy_from_grid type="file" class="ps_hidden form-control ps_renergise_btn" title="Price at which you buy electricity from the grid [&euro;/KWh]" placeholder="Price at which you buy electricity from the grid [&euro;/KWh]">
-                    </mat-form-field>                
-                </div>
-                <div class="col-4 d-grid mx-auto">
-                    <fa-icon mat-raised-button [icon]="faFile" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
-                </div>
-            </div>
-
-            <div [@inOutAnimation] *ngIf="isShown==true">
-                                
-                <div class="row pt-1">
-                    <div class="col-8 d-grid mx-auto">
-                        <mat-form-field appearance="fill">
-                            <input matInput name="CO2_emissions" id="CO2_emissions" #CO2_emissions type="text" class="form-control ps_renergise_btn" title="C02 emissions produced by kWh used [gCO2/kWh]" placeholder="C02 emissions produced by kWh used [gCO2/kWh]">
-                        </mat-form-field>                
+            <form [formGroup]="publicForm" (ngSubmit)="btnClickAddAsset()">
+                <div class="form-group">
+                    <div class="row pt-4">
+                        <app-menu-input-data></app-menu-input-data>
+                        <h1><img class="img-fluid ps_imgsize" title="Import Data Files" src="assets/images/1x/newAssetImage.png"> New asset: Public Grid</h1>
+                        <h2>{{ description }}</h2>
+                    </div>            
+                            
+                    <div class="row">
+                        <div class="col-8 d-grid mx-auto">
+                            <div class="ps_logo_green">{{ question }}</div>
+                            <div>{{ answer }}</div>
+                        </div>
+                        <div class="col-4 d-grid mx-auto">
+                            <mat-form-field appearance="fill">
+                                <mat-slide-toggle title="Advanced options" (change)="toggleShow()">Advanced</mat-slide-toggle>                        
+                            </mat-form-field>
+                        </div>
+                    </div> 
+                    
+                    <div class="row pt-1">
+                        <div class="col-8 d-grid mx-auto">
+                            <mat-form-field appearance="fill">
+                                <input matInput formControlName="max_power_sell" name="max_power_sell" id="max_power_sell" #max_power_sell type="text" class="form-control ps_renergise_btn" title="Maximum power the grid can provide [kW]" placeholder="Maximum power the grid can provide [kW]">
+                            </mat-form-field>                
+                        </div>
+                        <div class="col-4 d-grid mx-auto"></div>
                     </div>
-                    <div class="col-4 d-grid mx-auto"></div>
-                </div>
 
-                <div class="row pt-1">
-                    <div class="col-8 d-grid mx-auto">
-                        <mat-form-field appearance="fill">
-                            <input matInput name="monthly_peak_cost" id="monthly_peak_cost" #monthly_peak_cost type="text" class="form-control ps_renergise_btn" title="Cost for max monthly peak power [&euro;/KWh]" placeholder="Cost for max monthly peak power [&euro;/KWh]">
-                        </mat-form-field>                
+                    <div class="row pt-1">
+                        <div class="col-8 d-grid mx-auto">
+                            <mat-form-field appearance="fill">
+                                <input matInput formControlName="max_power_buy" name="max_power_buy" id="max_power_buy" #max_power_buy type="text" class="form-control ps_renergise_btn" title="Maximum power the grid can receive [kW]" placeholder="Maximum power the grid can receive [kW]">
+                            </mat-form-field>                
+                        </div>
+                        <div class="col-4 d-grid mx-auto"></div>
                     </div>
-                    <div class="col-4 d-grid mx-auto"></div>
+
+                    <div class="row pt-1">
+                        <div class="col-8 d-grid mx-auto">
+                            <mat-form-field appearance="fill">
+                                <label class="form-control ps_renergise_btn" title="Price at which you sell electricity to the public grid [&euro;/KWh]" for="sell_to_grid">Price you sell electricity to the public grid [&euro;/KWh]</label>
+                                <input matInput formControlName="sell_to_grid" name="sell_to_grid" id="sell_to_grid" #sell_to_grid type="file" class="ps_hidden form-control ps_renergise_btn" title="Price at which you sell electricity to the public grid [&euro;/KWh]" placeholder="Price at which you sell electricity to the public grid [&euro;/KWh]">
+                            </mat-form-field>                
+                        </div>
+                        <div class="col-4 d-grid mx-auto">
+                            <fa-icon mat-raised-button [icon]="faFile" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
+                        </div>
+                    </div>
+
+                    <div class="row pt-1">
+                        <div class="col-8 d-grid mx-auto">
+                            <mat-form-field appearance="fill">
+                                <label class="form-control ps_renergise_btn" title="Price at which you buy electricity from the grid [&euro;/KWh]" for="buy_from_grid">Price you buy electricity from the grid [&euro;/KWh]</label>
+                                <input matInput formControlName="buy_from_grid" name="buy_from_grid" id="buy_from_grid" #buy_from_grid type="file" class="ps_hidden form-control ps_renergise_btn" title="Price at which you buy electricity from the grid [&euro;/KWh]" placeholder="Price at which you buy electricity from the grid [&euro;/KWh]">
+                            </mat-form-field>                
+                        </div>
+                        <div class="col-4 d-grid mx-auto">
+                            <fa-icon mat-raised-button [icon]="faFile" size="2x" [styles]="{'color': '#FCC78C'}"></fa-icon>
+                        </div>
+                    </div>
+
+                    <div [@inOutAnimation] *ngIf="isShown==true">
+                                        
+                        <div class="row pt-1">
+                            <div class="col-8 d-grid mx-auto">
+                                <mat-form-field appearance="fill">
+                                    <input matInput formControlName="CO2_emissions" name="CO2_emissions" id="CO2_emissions" #CO2_emissions type="text" class="form-control ps_renergise_btn" title="C02 emissions produced by kWh used [gCO2/kWh]" placeholder="C02 emissions produced by kWh used [gCO2/kWh]">
+                                </mat-form-field>                
+                            </div>
+                            <div class="col-4 d-grid mx-auto"></div>
+                        </div>
+
+                        <div class="row pt-1">
+                            <div class="col-8 d-grid mx-auto">
+                                <mat-form-field appearance="fill">
+                                    <input matInput formControlName="monthly_peak_cost" name="monthly_peak_cost" id="monthly_peak_cost" #monthly_peak_cost type="text" class="form-control ps_renergise_btn" title="Cost for max monthly peak power [&euro;/KWh]" placeholder="Cost for max monthly peak power [&euro;/KWh]">
+                                </mat-form-field>                
+                            </div>
+                            <div class="col-4 d-grid mx-auto"></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </form>
 
             <div class="row pt-1 pb-2">
                 <div class="col-4 d-grid mx-auto">

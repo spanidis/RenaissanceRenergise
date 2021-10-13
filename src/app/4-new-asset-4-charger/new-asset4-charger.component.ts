@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { ViewChild, ElementRef } from '@angular/core';
+import { GlobalConstants } from '../common/global-constants';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-new-asset4-charger',
@@ -9,7 +11,7 @@ import { ViewChild, ElementRef } from '@angular/core';
 })
 export class NewAsset4ChargerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
   faFile = faFile;
 
   @ViewChild('efficiency') efficiency: ElementRef;
@@ -21,6 +23,21 @@ export class NewAsset4ChargerComponent implements OnInit {
   @ViewChild('P_max') P_max: ElementRef;
   @ViewChild('kind_session') kind_session: ElementRef;
 
+  description = GlobalConstants.assetDescription;
+  question = GlobalConstants.assetQuestion;
+  answer = GlobalConstants.assetAnswer;
+
+  chargerForm = this.fb.group({
+    efficiency: [''],
+    max_charge_cp: [''],
+    max_discharge_cp: [''],
+    kind_cp: [''],
+    energy: [''],
+    detention: [''],
+    P_max: [''],
+    kind_session: ['']
+  });
+  
   ngOnInit(): void {
   }
 
